@@ -21,3 +21,7 @@ Kohteena on ylipäätänsä pelaajat ja peleistä kiinnostuneet.
 ### Teknologiat
 WPF-sovellus ja tietokannanhallintatyökaluna MySQL
 C# ja XAML
+
+### Tärkeimpänä:
+Poikkeuksienhallinta korostuu, sekä tiedonhaku ja sidonta.
+Käyttöliittymä ja siihen liittyvä käyttökokemus (UX)
