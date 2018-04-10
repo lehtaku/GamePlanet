@@ -30,8 +30,8 @@ Moderni käyttöliittymä, sekä yhteisöominaisuuksia (arvostelut, sekä omat p
 * Lisätä kavereita
 
 ## Alustavia suunnitelma:
-![Diagram1](/suunnitelma.jpeg)
-![Diagram](/initialdiagram.png)
+![Diagram1](/Docs/suunnitelma.jpeg)
+![Diagram](/Docs/initialdiagram.png)
 
 ## Kohde
 Kohteena on ylipäätänsä pelaajat ja peleistä kiinnostuneet. 
@@ -62,7 +62,7 @@ Pääsääntöisesti viikonloput, sekä keskiviikko ja perjantai toimivat projek
 * 24.4.2018 - Koko harjoitustyö valmiina esiteltäväksi, sekä kaikki mahdollinen yksikkötestaus valmiina
 
 # ER-kaavio
-![ER](/erdiagram.JPG)
+![ER](/Docs/erdiagram.JPG)
 
 ## Haasteita
 * Tiedonhaku? Onko liian monimutkainen tietokantarakenne
