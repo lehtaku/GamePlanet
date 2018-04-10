@@ -34,7 +34,7 @@ Käytettävyys, sekä interaktiivisuus korkea, jotta sovellus olisi mahdollisimm
 
 ## Tärkeimpänä:
 Poikkeuksienhallinta korostuu, sekä tiedonhaku ja sidonta.
-Käyttöliittymä ja siihen liittyvä käyttökokemus (UX)
+Käyttöliittymä ja siihen liittyvä käyttökokemus (UX).
 
 # Työnjako
 Kumpikin, toteuttaa tietokannan yhteisillä kerroilla, jonka jälkeen speksi ja sen kirjoittaminen, sekä testi tietojen lisääminen itsenäisesti.
@@ -52,4 +52,10 @@ Pääsääntöisesti viikonloput, sekä keskiviikko ja perjantai toimivat projek
 * 18.4.2018 - Osa käyttöliittymästä valmiina esiteltäväksi, sekä päätoiminnallisuudet valmiina.
 * 24.4.2018 - Koko harjoitustyö valmiina esiteltäväksi, sekä kaikki mahdollinen yksikkötestaus valmiina
 
-
+## Haasteita
+* Tiedonhaku? Onko liian monimutkainen tietokantarakenne
+* Databinding
+* Visuaalisuus
+* Interaktiivisuus (Paljon uutta oppimista)
+* Aikataulu - Pitääkö aikataulu?
+* Työnjako - (Ensimmäinen yhteisprojekti, jossa versionhallinta kunnolla käytössä)
