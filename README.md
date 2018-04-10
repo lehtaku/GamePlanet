@@ -1,5 +1,5 @@
 ## GamePlanet
 
 ### Tekijät
- * Leevi Kopakkala
+ * Leevi Kopakkala - K8292
  * Aku Lehtonen
