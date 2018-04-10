@@ -23,6 +23,8 @@ Moderni käyttöliittymä, sekä yhteisöominaisuuksia (arvostelut, sekä omat p
 * "Seurata" toimitusta
 * Selata omaa profiilia
 
+## Alustava suunnitelma:
+[](./initialdiagram.png)
 
 ## Kohde
 Kohteena on ylipäätänsä pelaajat ja peleistä kiinnostuneet. 
