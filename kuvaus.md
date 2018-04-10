@@ -9,7 +9,7 @@ Tulee olla :
 * Kirjautua sisään
 * Muokata profiilia
 * "Ostaa" pelejä, yms. muita tuotteita
-1. Peleihin ja sovelluksiin jotka sitä vaativat linkitetty product code / license
+  - Peleihin ja sovelluksiin jotka sitä vaativat linkitetty product code / license
 * Kommentoida profiileja
 * Selata verkkokauppaa ja sen kategorioita
 * Arvostella pelejä
