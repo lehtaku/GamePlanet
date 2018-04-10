@@ -23,7 +23,7 @@ Moderni käyttöliittymä, sekä yhteisöominaisuuksia (arvostelut, sekä omat p
 * "Seurata" toimitusta
 * Selata omaa profiilia
 
-## Alustava suunnitelma:
+## Alustavia suunnitelma:
 ![Diagram1](/suunnitelma.jpeg)
 ![Diagram](/initialdiagram.png)
 
