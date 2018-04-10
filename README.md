@@ -29,8 +29,8 @@ Kohteena on ylipäätänsä pelaajat ja peleistä kiinnostuneet.
 Käytettävyys, sekä interaktiivisuus korkea, jotta sovellus olisi mahdollisimman helppokäyttöinen, mutta moderni.
 
 ## Teknologiat
-```WPF-sovellus ja tietokannanhallintatyökaluna MySQL```
-```C# ja XAML```
+* ```WPF-sovellus ja tietokannanhallintatyökaluna MySQL```
+* ```C# ja XAML```
 
 ## Tärkeimpänä:
 Poikkeuksienhallinta korostuu, sekä tiedonhaku ja sidonta.
