@@ -6,6 +6,8 @@ Repositorio githubissa, jonne pushataan tehdyt muutokset.
 
 # Suunnitelma
 
+Pääsääntöisesti viikonloput, sekä keskiviikko ja perjantai toimivat projektin työpäivinä, jotta aikataulu pitäisi.
+
 * 1.4.2018 - Tietokannan suunnitelma valmis
 * 8.4.2018 - Tietokanta pystyssä
 * 13.4.2018 - Käyttöliittymäohjelmointi speksi palautettuna, sekä tietokanta harjoitustyö valmis, sekä palautettu
