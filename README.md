@@ -59,3 +59,4 @@ Pääsääntöisesti viikonloput, sekä keskiviikko ja perjantai toimivat projek
 * Interaktiivisuus (Paljon uutta oppimista)
 * Aikataulu - Pitääkö aikataulu?
 * Työnjako - (Ensimmäinen yhteisprojekti, jossa versionhallinta kunnolla käytössä)
+* Koodin eheys
