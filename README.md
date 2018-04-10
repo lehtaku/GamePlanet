@@ -24,7 +24,7 @@ Moderni käyttöliittymä, sekä yhteisöominaisuuksia (arvostelut, sekä omat p
 * Selata omaa profiilia
 
 ## Alustava suunnitelma:
-![Diagram](/initialdiagram.PNG)
+![Diagram](/initialdiagram.png)
 
 ## Kohde
 Kohteena on ylipäätänsä pelaajat ja peleistä kiinnostuneet. 
