@@ -61,6 +61,9 @@ Pääsääntöisesti viikonloput, sekä keskiviikko ja perjantai toimivat projek
 * 18.4.2018 - Osa käyttöliittymästä valmiina esiteltäväksi, sekä päätoiminnallisuudet valmiina.
 * 24.4.2018 - Koko harjoitustyö valmiina esiteltäväksi, sekä kaikki mahdollinen yksikkötestaus valmiina
 
+# ER-kaavio
+![ER](/erdiagram.jpeg)
+
 ## Haasteita
 * Tiedonhaku? Onko liian monimutkainen tietokantarakenne
 * Databinding
