@@ -1,12 +1,15 @@
 ## Kuvaus
-Tarkoituksena on luoda verkkokauppa tyyppinen sovellus liityen tietokannat-harjoitustyön toteutukseen:
+Tarkoituksena on luoda peli-verkkokauppa tyyppinen sovellus liityen tietokannat-harjoitustyön toteutukseen.
+Visuaalisesti tulee olla toimiva, sekä miettiä mahdollista kohdeyleisöä sekä eri stakeholdereita.
+Tulee olla :
 
 ### Mitä ominaisuuksia suunnitelmissa?
 
 * Voi luoda käyttäjän
 * Kirjautua sisään
 * Muokata profiilia
-* Ostaa pelejä
+* "Ostaa" pelejä, yms. muita tuotteita
+1. Peleihin ja sovelluksiin jotka sitä vaativat linkitetty product code / license
 * Kommentoida profiileja
 * Selata verkkokauppaa ja sen kategorioita
 * Arvostella pelejä
@@ -14,4 +17,4 @@ Tarkoituksena on luoda verkkokauppa tyyppinen sovellus liityen tietokannat-harjo
 * Selata omaa profiilia
 
 ### Kohde
-Kohteena
+Kohteena on ylipäätänsä pelaajat ja peleistä kiinnostuneet. 
