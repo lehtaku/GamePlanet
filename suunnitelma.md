@@ -1,3 +1,9 @@
+# Työnjako
+Kumpikin, toteuttaa tietokannan yhteisillä kerroilla, jonka jälkeen speksi ja sen kirjoittaminen, sekä testi tietojen lisääminen itsenäisesti.
+Käyttöliittymän osalta työnjako katsotaan omien vahvuuksien mukaan, mutta tasaisesti.
+
+Repositorio githubissa, jonne pushataan tehdyt muutokset.
+
 # Suunnitelma
 
 * 1.4.2018 - Tietokannan suunnitelma valmis
