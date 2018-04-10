@@ -23,6 +23,10 @@ Moderni käyttöliittymä, sekä yhteisöominaisuuksia (arvostelut, sekä omat p
 * "Seurata" toimitusta
 * Selata omaa profiilia
 
+## Mahdollisia ominaisuuksia?
+
+* Lisätä kavereita
+
 ## Alustavia suunnitelma:
 ![Diagram1](/suunnitelma.jpeg)
 ![Diagram](/initialdiagram.png)
