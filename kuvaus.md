@@ -17,6 +17,7 @@ Visuaalisesti tulee olla toimiva, sekä miettiä mahdollista kohdeyleisöä sek�
 
 ### Kohde
 Kohteena on ylipäätänsä pelaajat ja peleistä kiinnostuneet. 
+Käytettävyys, sekä interaktiivisuus korkea, jotta sovellus olisi mahdollisimman helppokäyttöinen, mutta moderni.
 
 ### Teknologiat
 WPF-sovellus ja tietokannanhallintatyökaluna MySQL
