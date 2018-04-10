@@ -1,9 +1,8 @@
 ## Kuvaus
 Tarkoituksena on luoda peli-verkkokauppa tyyppinen sovellus liityen tietokannat-harjoitustyön toteutukseen.
 Visuaalisesti tulee olla toimiva, sekä miettiä mahdollista kohdeyleisöä sekä eri stakeholdereita.
-Tulee olla :
 
-### Mitä ominaisuuksia suunnitelmissa?
+### Mitä ominaisuuksia?
 
 * Voi luoda käyttäjän
 * Kirjautua sisään
@@ -18,3 +17,6 @@ Tulee olla :
 
 ### Kohde
 Kohteena on ylipäätänsä pelaajat ja peleistä kiinnostuneet. 
+
+### Teknologiat
+WPF-sovellus ja tietokannanhallintatyökaluna MySQL
