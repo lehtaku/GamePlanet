@@ -24,6 +24,7 @@ Moderni käyttöliittymä, sekä yhteisöominaisuuksia (arvostelut, sekä omat p
 * Selata omaa profiilia
 
 ## Alustava suunnitelma:
+![Diagram1](/suunnitelma.jpeg)
 ![Diagram](/initialdiagram.png)
 
 ## Kohde
