@@ -20,3 +20,4 @@ Kohteena on ylipäätänsä pelaajat ja peleistä kiinnostuneet.
 
 ### Teknologiat
 WPF-sovellus ja tietokannanhallintatyökaluna MySQL
+C# ja XAML
