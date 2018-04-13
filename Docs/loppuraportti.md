@@ -79,3 +79,11 @@ End Sub
 
 ```
 
+## Show games
+
+![Diagram5](/Docs/gamesscreencap.PNG)
+
+## Store
+
+![Diagram1](/Docs/storescreencap.PNG)
+
