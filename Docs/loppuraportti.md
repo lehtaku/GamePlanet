@@ -51,6 +51,9 @@ End Sub
 
 ## Create User
 
+Eli tällä voi oikeasti luoda käyttäjän.
+Kirjoittaa tiedot ja painaa nappia, niin tiedot siirtyvät koodin mukaisesti tietokantaan!
+
 ![Diagram4](/Docs/createuserscreencap.PNG)
 
 ```VB
@@ -81,9 +84,14 @@ End Sub
 
 ## Show games
 
+Show games nappia painamalla pääsee näkemään omistamansa pelit, eli se hakee ID:n mukaan kaikki pelit joidenka lisenssin omistat
+
 ![Diagram5](/Docs/gamesscreencap.PNG)
 
+
 ## Store
+
+Storesssa pääsee näkemään kaupan sisällön
 
 ![Diagram1](/Docs/storescreencap1.PNG)
 
