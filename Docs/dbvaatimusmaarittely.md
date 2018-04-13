@@ -1,32 +1,12 @@
 <Projekti Gameplanet>
-(Pohjana sille palautettavalle raportille)
 <Leevi Kopakkala - K8292 | K8292@student.jamk.fi>
 <Aku Lehtonen - K9264 | K9264@student.jamk.fi>
+  
+(Pohjana sille palautettavalle raportille)
 
-## Tiedot
+### Tiedot
 * Versionumero: 0.5
 * Päiväys: 12.4.2018
-
-__Taulujen nimet__ (HUOM! TÄSSÄ VAIN VÄLIAIKAISESTI SUOMEKSI HELPOTTAMASSA MÄÄRITTELYN KIRJOITTAMISTA! SAA POISTAA)
-
-__Käyttäjä__ 
-* Käyttäjä
-* Profiili
-* Kommentti (profiilille)
-* Lisenssi (tuotteen omistus)
-  
-__Tuote__
-* Kategoria
-* Tuote
-* Tuotteella_on_kategorioita
-* Arvostelu (käyttäjän luoma)
-
-__Ostotapahtuma__
-* Tilaus
-* Tilaus_sisältää_tuotteita
-* Maksutapa
-* Kampanja
-* Kampanja_sisältää_tuotteita
 
 ## 1. Johdanto
 <Mihin käyttöön ohjelmisto tehdään, kenelle se on tarkoitettu, mitkä ovat järjestelmän tavoitteet?>
