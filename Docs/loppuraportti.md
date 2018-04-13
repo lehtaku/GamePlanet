@@ -5,6 +5,10 @@
 
 ## Login
 
+![Diagram1](/Docs/loginscreencap.PNG)
+![Diagram2](/Docs/loginscreencap2.PNG)
+![Diagram3](/Docs/loginscreencap3.PNG)
+
 Login ruutua varten piti kirjoittaa hieman VB koodia, jotta se oikeasti toimisi:
 
 ```VB
