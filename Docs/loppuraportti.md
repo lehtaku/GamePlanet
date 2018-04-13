@@ -6,12 +6,11 @@
 ## Login
 
 ![Diagram1](/Docs/loginscreencap.PNG)
-* Kirjautumisruutu
+```Kirjautumisruutu```
 ![Diagram2](/Docs/loginscreencap2.PNG)
-* Jos kirjautumistunnukset väärä
+```Jos kirjautumistunnukset väärä```
 ![Diagram3](/Docs/loginscreencap3.PNG)
-
-* Kun kirjautumistunnukset oikeat
+```Kun kirjautumistunnukset oikeat```
 
 Login ruutua varten piti kirjoittaa hieman VB koodia, jotta se oikeasti toimisi:
 
