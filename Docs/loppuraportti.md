@@ -41,3 +41,31 @@ Private Sub Form_Load()
 Me.txtUsername.SetFocus
 End Sub ```
 
+## Create User
+
+```VB
+
+Option Compare Database
+
+Private Sub Command11_Click()
+
+Dim db As Database
+Dim rec As Recordset
+
+Set db = CurrentDb
+Set rec = db.OpenRecordset("Select * from User")
+
+rec.AddNew
+rec("FirstName") = Me.txtFirstName
+rec("LastName") = Me.txtLastname
+rec("UserName") = Me.txtUsername
+rec("Email") = Me.txtEmail
+rec("Password") = Me.txtPassword
+rec.Update
+
+Set rec = Nothing
+Set db = Nothing
+End Sub
+
+```
+
