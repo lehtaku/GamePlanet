@@ -1,0 +1,291 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema K8292_2
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema K8292_2
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `K8292_2` DEFAULT CHARACTER SET utf8 ;
+USE `K8292_2` ;
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`Campaign`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`Campaign` (
+  `CampaignID` INT(11) NOT NULL AUTO_INCREMENT,
+  `CampaignCode` VARCHAR(45) NOT NULL,
+  `StartsAt` DATETIME NOT NULL,
+  `EndsAt` DATETIME NOT NULL,
+  PRIMARY KEY (`CampaignID`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 7
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`Product`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`Product` (
+  `ProductID` INT(11) NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(45) NOT NULL,
+  `Description` TEXT NOT NULL,
+  `Price` DOUBLE(6,2) NOT NULL,
+  PRIMARY KEY (`ProductID`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 15
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`Campaign_has_Product`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`Campaign_has_Product` (
+  `CampaignID` INT(11) NOT NULL,
+  `ProductID` INT(11) NOT NULL,
+  PRIMARY KEY (`CampaignID`, `ProductID`),
+  INDEX `fk_Campaign_has_Product_Product1_idx` (`ProductID` ASC),
+  INDEX `fk_Campaign_has_Product_Campaign1_idx` (`CampaignID` ASC),
+  CONSTRAINT `fk_Campaign_has_Product_Campaign1`
+    FOREIGN KEY (`CampaignID`)
+    REFERENCES `K8292_2`.`Campaign` (`CampaignID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Campaign_has_Product_Product1`
+    FOREIGN KEY (`ProductID`)
+    REFERENCES `K8292_2`.`Product` (`ProductID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`Category`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`Category` (
+  `CategoryID` INT(11) NOT NULL AUTO_INCREMENT,
+  `CategoryName` VARCHAR(45) NULL DEFAULT NULL,
+  `CategoryDesc` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`CategoryID`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 12
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`User`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`User` (
+  `UserID` INT(11) NOT NULL AUTO_INCREMENT,
+  `FirstName` VARCHAR(45) NOT NULL,
+  `LastName` VARCHAR(45) NOT NULL,
+  `UserName` VARCHAR(45) NULL DEFAULT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Password` VARCHAR(45) NOT NULL,
+  `CreatedAt` DATETIME NOT NULL,
+  PRIMARY KEY (`UserID`),
+  UNIQUE INDEX `Email` (`Email` ASC))
+ENGINE = InnoDB
+AUTO_INCREMENT = 14
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`Profile`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`Profile` (
+  `ProfileID` INT(11) NOT NULL AUTO_INCREMENT,
+  `AvatarIMG` VARCHAR(45) NULL DEFAULT NULL,
+  `ProfileDesc` VARCHAR(45) NULL DEFAULT NULL,
+  `UserID` INT(11) NOT NULL,
+  PRIMARY KEY (`ProfileID`),
+  INDEX `fk_Profile_User_idx` (`UserID` ASC),
+  CONSTRAINT `fk_Profile_User`
+    FOREIGN KEY (`UserID`)
+    REFERENCES `K8292_2`.`User` (`UserID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 10
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`Comment`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`Comment` (
+  `CommentID` INT(11) NOT NULL AUTO_INCREMENT,
+  `CommentTXT` VARCHAR(45) NOT NULL,
+  `CreatedAt` DATETIME NOT NULL,
+  `ProfileID` INT(11) NOT NULL,
+  `fk_CommentID` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`CommentID`),
+  INDEX `fk_Comment_Profile1_idx` (`ProfileID` ASC),
+  INDEX `FK_CommentID_idx` (`fk_CommentID` ASC),
+  CONSTRAINT `FK_CommentID`
+    FOREIGN KEY (`fk_CommentID`)
+    REFERENCES `K8292_2`.`Comment` (`CommentID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Comment_Profile1`
+    FOREIGN KEY (`ProfileID`)
+    REFERENCES `K8292_2`.`Profile` (`ProfileID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 15
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`License`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`License` (
+  `LicenseID` INT(11) NOT NULL AUTO_INCREMENT,
+  `LicenseKey` VARCHAR(45) NOT NULL DEFAULT '',
+  `ProductID` INT(11) NOT NULL,
+  `UserID` INT(11) NOT NULL,
+  PRIMARY KEY (`LicenseID`),
+  INDEX `fk_Licenses_Product1_idx` (`ProductID` ASC),
+  INDEX `fk_Licenses_User1_idx` (`UserID` ASC),
+  CONSTRAINT `fk_Licenses_Product1`
+    FOREIGN KEY (`ProductID`)
+    REFERENCES `K8292_2`.`Product` (`ProductID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Licenses_User1`
+    FOREIGN KEY (`UserID`)
+    REFERENCES `K8292_2`.`User` (`UserID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 25
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`Payment`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`Payment` (
+  `PaymentID` INT(11) NOT NULL AUTO_INCREMENT,
+  `PaymentType` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`PaymentID`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 14
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`PrdOrder`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`PrdOrder` (
+  `OrderID` INT(11) NOT NULL AUTO_INCREMENT,
+  `TotalPrice` DOUBLE NOT NULL,
+  `Status` ENUM('pending', 'processing', 'completed') NOT NULL,
+  `UserID` INT(11) NOT NULL,
+  `PaymentID` INT(11) NOT NULL,
+  `CreatedAt` DATETIME NOT NULL,
+  PRIMARY KEY (`OrderID`),
+  INDEX `fk_Order_User1_idx` (`UserID` ASC),
+  INDEX `fk_Order_Payment1_idx` (`PaymentID` ASC),
+  CONSTRAINT `fk_Order_Payment1`
+    FOREIGN KEY (`PaymentID`)
+    REFERENCES `K8292_2`.`Payment` (`PaymentID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Order_User1`
+    FOREIGN KEY (`UserID`)
+    REFERENCES `K8292_2`.`User` (`UserID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 6
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`PrdOrder_has_License`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`PrdOrder_has_License` (
+  `OrderID` INT(11) NOT NULL,
+  `LicenseID` INT(11) NOT NULL,
+  PRIMARY KEY (`OrderID`, `LicenseID`),
+  INDEX `fk_Order_has_Licenses_Licenses1_idx` (`LicenseID` ASC),
+  INDEX `fk_Order_has_Licenses_Order1_idx` (`OrderID` ASC),
+  CONSTRAINT `fk_Order_has_Licenses_Licenses1`
+    FOREIGN KEY (`LicenseID`)
+    REFERENCES `K8292_2`.`License` (`LicenseID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Order_has_Licenses_Order1`
+    FOREIGN KEY (`OrderID`)
+    REFERENCES `K8292_2`.`PrdOrder` (`OrderID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`Product_has_Category`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`Product_has_Category` (
+  `ProductID` INT(11) NOT NULL DEFAULT '0',
+  `CategoryID` INT(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`ProductID`, `CategoryID`),
+  INDEX `fk_Product_has_Category_Category1_idx` (`CategoryID` ASC),
+  INDEX `fk_Product_has_Category_Product1_idx` (`ProductID` ASC),
+  CONSTRAINT `fk_Product_has_Category_Product1`
+    FOREIGN KEY (`ProductID`)
+    REFERENCES `K8292_2`.`Product` (`ProductID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Product_has_Category_Category1`
+    FOREIGN KEY (`CategoryID`)
+    REFERENCES `K8292_2`.`Category` (`CategoryID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `K8292_2`.`Review`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `K8292_2`.`Review` (
+  `ReviewID` INT(11) NOT NULL AUTO_INCREMENT,
+  `ReviewContent` VARCHAR(45) NOT NULL,
+  `CreatedAt` DATETIME NOT NULL,
+  `Rating` INT(11) UNSIGNED NOT NULL,
+  `ProductID` INT(11) NOT NULL,
+  `UserID` INT(11) NOT NULL,
+  PRIMARY KEY (`ReviewID`),
+  INDEX `fk_Review_Product1_idx` (`ProductID` ASC),
+  INDEX `fk_Review_User1_idx` (`UserID` ASC),
+  CONSTRAINT `fk_Review_Product1`
+    FOREIGN KEY (`ProductID`)
+    REFERENCES `K8292_2`.`Product` (`ProductID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Review_User1`
+    FOREIGN KEY (`UserID`)
+    REFERENCES `K8292_2`.`User` (`UserID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 9
+DEFAULT CHARACTER SET = utf8;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
