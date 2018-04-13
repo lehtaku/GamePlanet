@@ -51,6 +51,8 @@ End Sub
 
 ## Create User
 
+![Diagram4](/Docs/createuserscreencap.PNG)
+
 ```VB
 
 Option Compare Database
