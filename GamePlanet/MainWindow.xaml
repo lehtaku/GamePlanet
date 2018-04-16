@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GamePlanet"
         mc:Ignorable="d"
-        Title="GamePlanet" Height="350" Width="525">
-    <Grid>
+        Title="GamePlanet" Height="700" Width="450" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown">
         
+    
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Effect>
+            <DropShadowEffect/>
+        </Grid.Effect>
+        <Grid.Background>
+            <ImageBrush ImageSource="Media/logintest.png" Stretch="UniformToFill" Opacity="0.995"/>
+        </Grid.Background>
     </Grid>
 </Window>
