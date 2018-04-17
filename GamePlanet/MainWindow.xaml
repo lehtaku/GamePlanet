@@ -67,21 +67,47 @@
                     <RotateTransform Angle="-90"/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <TextBox x:Name="txbUsername" Height="33" Margin="40,300,40,0">
+            <TextBox x:Name="txbUsername" Height="33" Margin="40,300,40,0" Background="White" Opacity="0.45">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <TextBox x:Name="txbPassword" Height="33" Margin="40,50,40,0">
+            <TextBox x:Name="txbPassword" Height="33" Margin="40,50,40,0" Opacity="0.65" Background="#FF619B88">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <Button Content="Login" Height="48" Margin="40,50"/>
+            <Button Content="Login" Height="48" Margin="40,50" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Foreground>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF002C6C" Offset="0"/>
+                        <GradientStop Color="#FFFD5C00" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Foreground>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" SpreadMethod="Reflect">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="255.964" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF619B88"/>
+                        <GradientStop Color="#FF062734" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
 
     </Grid>
