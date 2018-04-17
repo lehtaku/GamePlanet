@@ -61,20 +61,21 @@
 
         <!-- Actual important stuff -->
 
-        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="611" Margin="165,-16,0,0" VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5">
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="611" Margin="159,-4,0,-6" VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <RotateTransform Angle="-90"/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <TextBox x:Name="txbUsername" Height="33" Margin="40,300,40,0" Background="White" Opacity="0.45">
+            <Label x:Name="lblWelcome" Content="Login" Height="76" Margin="0,50,40,-300" HorizontalAlignment="Right" Width="306" FontSize="48" Foreground="White" FontFamily="Leelawadee UI Semilight"/>
+            <TextBox x:Name="txbUsername" Height="33" Margin="40,300,40,0" Background="White" Opacity="0.45" FontSize="18">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <TextBox x:Name="txbPassword" Height="33" Margin="40,50,40,0" Opacity="0.65" Background="#FF619B88">
+            <TextBox x:Name="txbPassword" Height="33" Margin="40,50,40,0" Opacity="0.65" Background="#FF619B88" FontSize="18">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -85,11 +86,13 @@
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
+                        
                     </Style>
+                    
                 </Button.Resources>
                 <Button.Foreground>
                     <RadialGradientBrush>
-                        <GradientStop Color="#FF002C6C" Offset="0"/>
+                        <GradientStop Color="#FF021C42" Offset="0"/>
                         <GradientStop Color="#FFFD5C00" Offset="1"/>
                     </RadialGradientBrush>
                 </Button.Foreground>
