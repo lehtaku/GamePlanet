@@ -69,6 +69,7 @@
             </StackPanel.RenderTransform>
             <TextBox x:Name="txbUsername" Height="33" Margin="40,300,40,0"></TextBox>
             <TextBox x:Name="txbPassword" Height="33" Margin="40,50,40,0"></TextBox>
+            <Button Content="Login" Height="48" Margin="40,50"/>
         </StackPanel>
 
     </Grid>
