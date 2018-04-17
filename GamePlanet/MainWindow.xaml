@@ -30,8 +30,8 @@
         </Grid.RenderTransform>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <GradientStop Color="#FF000E27" Offset="0"/>
-                <GradientStop Color="#FF014646" Offset="1"/>
+                <GradientStop Color="#FF3D00A8" Offset="0"/>
+                <GradientStop Color="#FF038181" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Image HorizontalAlignment="Left" Height="696" Margin="31,349,0,-444" VerticalAlignment="Top" Width="426" Source="Media/screensh1.png" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" Grid.ColumnSpan="2">
@@ -75,7 +75,7 @@
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <TextBox x:Name="txbPassword" Height="33" Margin="52,50,40,0" Opacity="0.65" Background="#FF619B88" FontSize="18">
+            <TextBox x:Name="txbPassword" Height="33" Margin="52,50,40,0" Opacity="0.65" Background="#FF61869B" FontSize="18">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -106,8 +106,8 @@
                                 <TranslateTransform/>
                             </TransformGroup>
                         </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#FF619B88"/>
-                        <GradientStop Color="#FF062734" Offset="1"/>
+                        <GradientStop Color="#FF2B97BF"/>
+                        <GradientStop Color="#FF061D34" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
