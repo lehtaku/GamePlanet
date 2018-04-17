@@ -113,7 +113,7 @@
             </Button>
         </StackPanel>
         <Rectangle Grid.Column="1" Height="429" Margin="276,581,0,-410" VerticalAlignment="Top" Opacity="0.25" Fill="#FF21B8FF"/>
-        <Ellipse Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="220,791,0,-214" VerticalAlignment="Top" Width="24" Opacity="0.5" Stroke="#FF4FCEFF" StrokeThickness="2" RenderTransformOrigin="0.469,-0.475"/>
+        <Ellipse Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="220,791,0,-214" VerticalAlignment="Top" Width="24" Opacity="0.5" Stroke="#FF60A1B9" StrokeThickness="2" RenderTransformOrigin="0.469,-0.475"/>
 
     </Grid>
 </Window>
