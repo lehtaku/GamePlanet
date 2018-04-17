@@ -50,7 +50,7 @@
                 <ImageBrush ImageSource="Media/screensh1.png" Stretch="UniformToFill" Opacity="0.75"/>
             </Image.OpacityMask>
         </Image>
-        <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="158" Margin="248,727,0,-284" VerticalAlignment="Top" Width="156" Source="Media/logo.png">
+        <Image HorizontalAlignment="Left" Height="158" Margin="244,708,0,-265" VerticalAlignment="Top" Width="155" Source="Media/logo.png" Grid.ColumnSpan="2">
             <Image.Effect>
                 <DropShadowEffect Color="#FF1D1818" Opacity="0.5"/>
             </Image.Effect>
