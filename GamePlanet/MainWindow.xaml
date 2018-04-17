@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GamePlanet"
         mc:Ignorable="d"
-        Title="GamePlanet" Height="700" Width="1000" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center">
+        Title="GamePlanet" Height="700" Width="1000" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" Foreground="White">
 
 
     <Window.Background>
@@ -14,7 +14,7 @@
 
     <Grid RenderTransformOrigin="0.501,0.669" Margin="252,-51,52,150">
         <Grid.Effect>
-            <DropShadowEffect/>
+            <DropShadowEffect Color="#FF383737"/>
         </Grid.Effect>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="216*"/>
