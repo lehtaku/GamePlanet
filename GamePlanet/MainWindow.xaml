@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GamePlanet"
         mc:Ignorable="d"
-        Title="GamePlanet" Height="700" Width="1000" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown">
+        Title="GamePlanet" Height="700" Width="1000" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center">
 
 
     <Window.Background>
@@ -58,6 +58,18 @@
                 <ImageBrush ImageSource="Media/logo.png"/>
             </Image.OpacityMask>
         </Image>
+
+        <!-- Actual important stuff -->
+
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="611" Margin="165,-16,0,0" VerticalAlignment="Top" Width="386" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <TextBox x:Name="txbUsername" Height="33" Margin="40,300,40,0"></TextBox>
+            <TextBox x:Name="txbPassword" Height="33" Margin="40,50,40,0"></TextBox>
+        </StackPanel>
 
     </Grid>
 </Window>
