@@ -82,13 +82,12 @@
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <Button Content="Login" Height="48" Margin="52,50,40,50" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0">
+            <Button Content="Login" Height="48" Margin="52,50,40,50" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Opacity="0.75">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
-
+                         
                     </Style>
-
                 </Button.Resources>
                 <Button.Foreground>
                     <RadialGradientBrush>
@@ -110,6 +109,7 @@
                         <GradientStop Color="#FF061D34" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
+                
             </Button>
         </StackPanel>
 
