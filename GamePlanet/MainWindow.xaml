@@ -68,7 +68,7 @@
                 </TransformGroup>
             </StackPanel.RenderTransform>
             <Label x:Name="lblWelcome" Content="Login" Height="76" Margin="0,50,40,-300" HorizontalAlignment="Right" Width="306" FontSize="48" Foreground="White" FontFamily="Leelawadee UI Semilight" HorizontalContentAlignment="Center"/>
-            <TextBox x:Name="txbUsername" Height="45" Margin="52,300,40,0" Background="White" Opacity="0.45" FontSize="20" Text="Username" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei Light">
+            <TextBox x:Name="txbUsername" Height="45" Margin="52,300,40,0" Background="White" Opacity="0.45" FontSize="20" Text="Username" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
