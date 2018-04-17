@@ -9,7 +9,7 @@
     <Window.Background>
         <ImageBrush/>
     </Window.Background>
-    <Grid RenderTransformOrigin="0.501,0.669" Margin="155,-196,186,17">
+    <Grid RenderTransformOrigin="0.501,0.669" Margin="238,-113,103,58">
         <Grid.RenderTransform>
             <TransformGroup>
                 <ScaleTransform ScaleY="1" ScaleX="1"/>
