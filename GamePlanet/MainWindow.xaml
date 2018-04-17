@@ -67,8 +67,20 @@
                     <RotateTransform Angle="-90"/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <TextBox x:Name="txbUsername" Height="33" Margin="40,300,40,0"></TextBox>
-            <TextBox x:Name="txbPassword" Height="33" Margin="40,50,40,0"></TextBox>
+            <TextBox x:Name="txbUsername" Height="33" Margin="40,300,40,0">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBox x:Name="txbPassword" Height="33" Margin="40,50,40,0">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
         </StackPanel>
 
     </Grid>
