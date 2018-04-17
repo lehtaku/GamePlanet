@@ -11,7 +11,7 @@
     <Window.Background>
         <ImageBrush/>
     </Window.Background>
-    
+
     <Grid RenderTransformOrigin="0.501,0.669" Margin="252,-51,52,150">
         <Grid.Effect>
             <DropShadowEffect/>
