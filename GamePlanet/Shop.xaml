@@ -1,0 +1,44 @@
+﻿<Window x:Class="GamePlanet.Shop"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GamePlanet"
+        mc:Ignorable="d"
+        Title="Shop" Height="720" Width="1280">
+
+    <Grid Margin="0,0,0,0">
+        <DockPanel Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF272727" Width="932">
+            <Button Content="Profiili" Margin="760 0 0 0" Height="40" Width="75"/>
+            <Button Content="Ostoskori" Margin="10 0 10 0" Height="40" HorizontalAlignment="Right" Width="75"/>
+        </DockPanel>
+
+        <StackPanel HorizontalAlignment="Left" Width="340" RenderTransformOrigin="0.474,0.416" Height="689" VerticalAlignment="Top" Background="#FF555454">
+            <TextBlock TextWrapping="Wrap" Text="Tuotteet" FontSize="24" Margin="10 10 10 10" TextAlignment="Center"/>
+
+            <DataGrid Name="dgProducts" AutoGenerateColumns="False" Margin="5 5 5 5">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Image}" Margin="5 5 5 5" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" />
+                    <DataGridTextColumn Header="Price (€)" Binding="{Binding Price}" Width="55" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" Height="639" Margin="340,50,0,0" VerticalAlignment="Top" Width="932">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="Media/shop-background.jpg"/>
+            </StackPanel.Background>
+
+        </StackPanel>
+
+
+    </Grid>
+</Window>
