@@ -39,6 +39,15 @@ namespace GamePlanet
             this.Left = (screenWidth / 2) - (windowWidth / 2);
             this.Top = (screenHeight / 2) - (windowHeight / 2);
         }
+
+        public void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Login user = new Login();
+            user.Username = txbUsername.Text;
+            user.Password = pwdPassword.Password;
+
+            user.MySQLLogin(user.Username, user.Password);
+        }
     }
 
 
