@@ -42,11 +42,15 @@ namespace GamePlanet
 
         public void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+
             Login user = new Login();
             user.Username = txbUsername.Text;
             user.Password = pwdPassword.Password;
 
-            user.MySQLLogin(user.Username, user.Password);
+            string name = user.Username;
+            string pwd = user.Password;
+
+            DBLogin.MySQLLogin(name, pwd);
         }
     }
 

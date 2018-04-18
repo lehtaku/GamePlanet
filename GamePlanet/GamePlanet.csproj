@@ -76,6 +76,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DBLogin.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Shop.xaml.cs">
