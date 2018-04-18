@@ -49,6 +49,13 @@ namespace GamePlanet
             }
         }
 
+        private void dgProducts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            object item = dgProducts.SelectedItem;          
+            string title = (dgProducts.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
+            prodTitle.Text = title;
+            
+        }
     }
 
 }

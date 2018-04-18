@@ -80,7 +80,7 @@ namespace GamePlanet
         {
             List<Product> products = new List<Product>();
 
-            string query = "SELECT Image, Name, Price FROM Product";
+            string query = "SELECT Image, Name, Description, Price FROM Product";
 
             if (this.OpenConnection() == true)
             {
@@ -92,7 +92,7 @@ namespace GamePlanet
                     Product prod = new Product();
                     prod.Image = reader.GetString(0);
                     prod.Name = reader.GetString(1);
-                    prod.Price = reader.GetDouble(2);
+                    prod.Price = reader.GetDouble(3);
                     products.Add(prod);
                 }
                 return products;

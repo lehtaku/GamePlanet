@@ -16,7 +16,7 @@
         <StackPanel HorizontalAlignment="Left" Width="340" RenderTransformOrigin="0.474,0.416" VerticalAlignment="Top" Background="#FF555454">
             <TextBlock TextWrapping="Wrap" Text="Tuotteet" FontSize="24" Margin="10 10 10 8" TextAlignment="Center"/>
 
-            <DataGrid Name="dgProducts" MaxHeight="639"  AutoGenerateColumns="False" Margin="5 0 5 5">
+            <DataGrid Name="dgProducts" MaxHeight="639"  AutoGenerateColumns="False" Margin="5 0 5 5" SelectionChanged="dgProducts_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
@@ -38,12 +38,15 @@
             </StackPanel.Background>
 
             <StackPanel VerticalAlignment="Top" Width="400" Height="500">
-                <Image Height="450" Margin="40,20,40,20" />
+                <Image Name="cvrImg" Height="450" Margin="40,20,40,20" />
             </StackPanel>
 
             <StackPanel VerticalAlignment="Top" Width="530" Height="500" >
+                <TextBlock TextWrapping="Wrap" Text="Tuotteen nimi" Name="prodTitle" Margin="50 50 50 50" FontSize="24"/>
+                <TextBlock TextWrapping="Wrap" Text="TextBlock" Name="prodDesc" Margin="50 0 50 0" FontSize="14"/>
 
             </StackPanel>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
         </StackPanel>
 
 
