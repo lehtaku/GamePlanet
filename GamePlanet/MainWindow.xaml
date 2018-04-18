@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GamePlanet"
         mc:Ignorable="d"
-        Title="GamePlanet" Height="700" Width="762" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" Foreground="White">
+        Title="GamePlanet" Height="700" Width="1070" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" Foreground="White">
 
 
     <!-- Window background properties -->
@@ -18,7 +18,7 @@
 
     <!-- Grid properties -->
 
-    <Grid RenderTransformOrigin="0.501,0.669" Margin="0,-150,-6,101" Height="749" HorizontalAlignment="Right" Width="696" VerticalAlignment="Bottom" Background="#FF080C17">
+    <Grid RenderTransformOrigin="0.501,0.669" Margin="215,-151,0,100" Height="751" VerticalAlignment="Bottom" Background="#FF080C17" HorizontalAlignment="Left" Width="696">
         <Grid.Effect>
             <DropShadowEffect Color="#FF383737"/>
         </Grid.Effect>
@@ -37,7 +37,7 @@
 
         <!-- Login screen image properties -->
 
-        <Image Margin="0,0,11,-205" Source="Media/screensh1.png" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" HorizontalAlignment="Right" Width="310" Height="673" VerticalAlignment="Bottom">
+        <Image Margin="0,0,13,-343" Source="Media/screensh1.png" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" HorizontalAlignment="Right" Width="310" Height="674" VerticalAlignment="Bottom">
             <Image.Effect>
                 <BlurEffect Radius="50"/>
             </Image.Effect>
@@ -56,7 +56,7 @@
 
         <!-- Logo properties -->
 
-        <Image Height="117" Margin="280,555,298,0" VerticalAlignment="Top" Source="Media/logo.png" RenderTransformOrigin="0.53,0.304" Grid.ColumnSpan="2">
+        <Image Height="187" Margin="68,255,82,0" VerticalAlignment="Top" Source="Media/logo.png" RenderTransformOrigin="0.53,0.304">
 
             <Image.OpacityMask>
                 <ImageBrush ImageSource="Media/logo.png"/>
@@ -65,7 +65,7 @@
 
         <!-- Login control properties -->
 
-        <StackPanel Grid.ColumnSpan="2" Height="561" Margin="75,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="386">
+        <StackPanel Grid.ColumnSpan="2" Height="561" Margin="81,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="386">
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <RotateTransform Angle="-90"/>
@@ -127,26 +127,20 @@
 
             <!-- Login button-->
 
-            <Button Content="Login" Height="48" Margin="52,50,40,50" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Opacity="0.75" Cursor="Hand" Background="#FF2B5091">
+            <Button Content="Login" Height="48" Margin="52,50,40,50" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Opacity="0.75" Cursor="Hand" Background="#FF2B5091" Foreground="White">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
-                <Button.Foreground>
-                    <RadialGradientBrush>
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FFCBCBCB" Offset="1"/>
-                    </RadialGradientBrush>
-                </Button.Foreground>
             </Button>
 
         </StackPanel>
 
         <!-- Extra features -->
 
-        <Rectangle Grid.Column="1" Margin="322,0,-2,-176" Fill="White" Opacity="0.75"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="258,461,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Username">
+        <Rectangle Grid.Column="1" Margin="320,0,0,-313" Fill="White" Opacity="0.75"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="264,519,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Username">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -155,7 +149,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="1,461,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Password" Grid.Column="1">
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="7,519,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Password" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
