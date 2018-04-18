@@ -18,7 +18,7 @@
 
     <!-- Grid properties -->
 
-    <Grid RenderTransformOrigin="0.501,0.669" Margin="0,-37,50,157" Height="580" HorizontalAlignment="Right" Width="696" VerticalAlignment="Bottom" Background="#FF080C17">
+    <Grid RenderTransformOrigin="0.501,0.669" Margin="0,-150,-6,101" Height="749" HorizontalAlignment="Right" Width="696" VerticalAlignment="Bottom" Background="#FF080C17">
         <Grid.Effect>
             <DropShadowEffect Color="#FF383737"/>
         </Grid.Effect>
@@ -37,9 +37,9 @@
 
         <!-- Login screen image properties -->
 
-        <Image HorizontalAlignment="Right" Height="606" Margin="0,0,147,-203" VerticalAlignment="Bottom" Width="176" Source="Media/screensh1.png" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill">
+        <Image Margin="0,0,11,-205" Source="Media/screensh1.png" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" HorizontalAlignment="Right" Width="310" Height="673" VerticalAlignment="Bottom">
             <Image.Effect>
-                <BlurEffect Radius="45"/>
+                <BlurEffect Radius="50"/>
             </Image.Effect>
             <Image.RenderTransform>
                 <TransformGroup>
@@ -56,7 +56,7 @@
 
         <!-- Logo properties -->
 
-        <Image Height="117" Margin="116,231,116,0" VerticalAlignment="Top" Source="Media/logo.png" RenderTransformOrigin="0.53,0.304">
+        <Image Height="117" Margin="280,555,298,0" VerticalAlignment="Top" Source="Media/logo.png" RenderTransformOrigin="0.53,0.304" Grid.ColumnSpan="2">
 
             <Image.OpacityMask>
                 <ImageBrush ImageSource="Media/logo.png"/>
@@ -145,7 +145,7 @@
 
         <!-- Extra features -->
 
-        <Rectangle Grid.Column="1" Margin="256,580,-2,-176" Fill="White" Opacity="0.75"/>
+        <Rectangle Grid.Column="1" Margin="322,0,-2,-176" Fill="White" Opacity="0.75"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="258,461,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Username">
             <TextBlock.RenderTransform>
                 <TransformGroup>
