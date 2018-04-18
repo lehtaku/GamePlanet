@@ -10,7 +10,7 @@ namespace GamePlanet
 {
     public class DBLogin
     {
-        public static void MySQLLogin(string username, string password)
+        public static int MySQLLogin(string username, string password)
         {
 
             try
@@ -28,16 +28,23 @@ namespace GamePlanet
 
                     int result = Convert.ToInt32(cmd.ExecuteScalar());
                     if (result > 0)
+                    {
                         MessageBox.Show("Login Success");
+                        return result;
+                    }
                     else
-                        MessageBox.Show("Incorrect login");
+                    {
+                        MessageBox.Show("Username or Password is incorrect");
+                        return result;
+                    }
                 }
+
 
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
-                throw;
+                MessageBox.Show(ex.Message);
+                return 0;
             }
 
 

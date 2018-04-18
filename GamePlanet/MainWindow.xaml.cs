@@ -50,7 +50,13 @@ namespace GamePlanet
             string name = user.Username;
             string pwd = user.Password;
 
-            DBLogin.MySQLLogin(name, pwd);
+            int login = DBLogin.MySQLLogin(name, pwd);
+            if (login == 1)
+            {
+                Shop shop = new Shop();
+                shop.Show();
+                this.Close();
+            }
         }
     }
 
