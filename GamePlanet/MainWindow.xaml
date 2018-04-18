@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GamePlanet"
         mc:Ignorable="d"
-        Title="GamePlanet" Height="730" Width="1234" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" Foreground="White">
+        Title="GamePlanet" Height="700" Width="762" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" Foreground="White">
 
 
     <!-- Window background properties -->
@@ -18,7 +18,7 @@
 
     <!-- Grid properties -->
 
-    <Grid RenderTransformOrigin="0.501,0.669" Margin="268,-33,0,0" Height="600" HorizontalAlignment="Left" Width="664" VerticalAlignment="Top">
+    <Grid RenderTransformOrigin="0.501,0.669" Margin="0,-37,50,157" Height="580" HorizontalAlignment="Right" Width="696" VerticalAlignment="Bottom" Background="#FF080C17">
         <Grid.Effect>
             <DropShadowEffect Color="#FF383737"/>
         </Grid.Effect>
@@ -34,16 +34,10 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <GradientStop Color="#FF3D00A8" Offset="0"/>
-                <GradientStop Color="#FF038181" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
 
         <!-- Login screen image properties -->
 
-        <Image HorizontalAlignment="Left" Height="606" Margin="25,195,0,-201" VerticalAlignment="Top" Width="176" Source="Media/screensh1.png" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill">
+        <Image HorizontalAlignment="Right" Height="606" Margin="0,0,147,-203" VerticalAlignment="Bottom" Width="176" Source="Media/screensh1.png" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill">
             <Image.Effect>
                 <BlurEffect Radius="45"/>
             </Image.Effect>
@@ -62,10 +56,8 @@
 
         <!-- Logo properties -->
 
-        <Image Height="66" Margin="220,246,52,0" VerticalAlignment="Top" Source="Media/logo.png" Grid.Column="1" RenderTransformOrigin="0.53,0.304">
-            <Image.Effect>
-                <DropShadowEffect Color="#FF1D1818" Opacity="0.5"/>
-            </Image.Effect>
+        <Image Height="117" Margin="116,231,116,0" VerticalAlignment="Top" Source="Media/logo.png" RenderTransformOrigin="0.53,0.304">
+
             <Image.OpacityMask>
                 <ImageBrush ImageSource="Media/logo.png"/>
             </Image.OpacityMask>
@@ -86,30 +78,56 @@
 
             <!-- Welcome message -->
 
-            <Label x:Name="lblWelcome" Content="Login" Height="76" Margin="0,50,40,-400" HorizontalAlignment="Right" Width="306" FontSize="48" Foreground="White" FontFamily="Leelawadee UI Semilight" HorizontalContentAlignment="Center"/>
-
             <!-- Username -->
 
-            <TextBox x:Name="txbUsername" Height="45" Margin="52,300,40,0" Background="White" Opacity="0.45" FontSize="20" Text="Username" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light">
+            <TextBox x:Name="txbUsername" Height="45" Margin="52,300,40,0" Opacity="0.45" FontSize="18" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,0" CaretBrush="White">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
                     </Style>
                 </TextBox.Resources>
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="White"/>
+                        <GradientStop Color="#FF080C17" Offset="0.01"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
             </TextBox>
 
             <!-- Password -->
-            <PasswordBox x:Name="pwdPassword" Height="40" Margin="52,50,40,0" Opacity="0.65" Background="#FF61869B" FontSize="20" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei Light">
+            <PasswordBox x:Name="pwdPassword" Height="40" Margin="52,50,40,0" Opacity="0.65" FontSize="18" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light">
                 <PasswordBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
                     </Style>
                 </PasswordBox.Resources>
+                <PasswordBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF080C17" Offset="0.01"/>
+                    </LinearGradientBrush>
+                </PasswordBox.Background>
             </PasswordBox>
 
             <!-- Login button-->
 
-            <Button Content="Login" Height="48" Margin="52,50,40,50" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Opacity="0.75" Cursor="Hand">
+            <Button Content="Login" Height="48" Margin="52,50,40,50" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Opacity="0.75" Cursor="Hand" Background="#FF2B5091">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -121,29 +139,14 @@
                         <GradientStop Color="#FFCBCBCB" Offset="1"/>
                     </RadialGradientBrush>
                 </Button.Foreground>
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" SpreadMethod="Reflect">
-                        <LinearGradientBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                <RotateTransform Angle="255.964" CenterY="0.5" CenterX="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#FF2B97BF"/>
-                        <GradientStop Color="#FF061D34" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
             </Button>
 
         </StackPanel>
 
         <!-- Extra features -->
 
-        <Rectangle Grid.Column="1" Height="192" Margin="271,581,0,-173" VerticalAlignment="Top" Opacity="0.25" Fill="#FF21B8FF"/>
-        <Ellipse Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="220,791,0,-214" VerticalAlignment="Top" Width="24" Opacity="0.5" Stroke="#FF60A1B9" StrokeThickness="2" RenderTransformOrigin="0.469,-0.475"/>
-        <TextBlock HorizontalAlignment="Left" Height="36" Margin="14,466,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.5,0.5" FontSize="24" FontFamily="Microsoft YaHei UI Light">
+        <Rectangle Grid.Column="1" Margin="256,580,-2,-176" Fill="White" Opacity="0.75"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="258,461,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Username">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -151,7 +154,16 @@
                     <RotateTransform Angle="-90.0"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </TextBlock.RenderTransform><Run Text="Welcom"/><Run Text="e"/></TextBlock>
+            </TextBlock.RenderTransform></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="1,461,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Password" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
 
     </Grid>
 </Window>
