@@ -92,7 +92,7 @@
             </TextBox>
 
             <!-- Password -->
-            <PasswordBox x:Name="pwdPassword" Height="40" Margin="52,50,40,0" FontSize="18" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151">
+            <PasswordBox x:Name="pwdPassword" Height="40" Margin="52,50,40,0" FontSize="18" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
                 <PasswordBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
@@ -163,7 +163,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="66,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Forgot your password?" Grid.Column="1" Grid.Row="1" FontSize="10">
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="66,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Forgot your password?" Grid.Column="1" Grid.Row="1" FontSize="10" Cursor="Hand">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
