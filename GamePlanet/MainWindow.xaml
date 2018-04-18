@@ -116,7 +116,7 @@
 
             <!-- Login button-->
 
-            <Button Content="Login" Height="48" Margin="52,50,40,50" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B5091" Foreground="White">
+            <Button x:Name ="btnLogin" Content="Login" Height="48" Margin="52,50,40,50" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B5091" Foreground="White">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
