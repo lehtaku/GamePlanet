@@ -37,26 +37,11 @@
 
         <!-- Login screen image properties -->
 
-        <Image Margin="0,0,13,-343" Source="Media/screensh1.png" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" HorizontalAlignment="Right" Width="310" Height="674" VerticalAlignment="Bottom">
-            <Image.Effect>
-                <BlurEffect Radius="50"/>
-            </Image.Effect>
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-89.987"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="Media/screensh1.png" Stretch="UniformToFill" Opacity="0.75"/>
-            </Image.OpacityMask>
-        </Image>
+
 
         <!-- Logo properties -->
 
-        <Image Height="187" Margin="68,255,82,0" VerticalAlignment="Top" Source="Media/logo.png" RenderTransformOrigin="0.53,0.304">
+        <Image Height="187" Margin="248,813,248,-249" VerticalAlignment="Top" Source="Media/logo.png" RenderTransformOrigin="0.53,0.304" Grid.ColumnSpan="2">
 
             <Image.OpacityMask>
                 <ImageBrush ImageSource="Media/logo.png"/>
@@ -149,6 +134,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
+        <Rectangle Margin="2,751,26,-313" Fill="#FF080C17" Opacity="0.75" Grid.ColumnSpan="2" Panel.ZIndex="-1"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="7,519,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Password" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
