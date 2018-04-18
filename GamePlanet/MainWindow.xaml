@@ -92,7 +92,7 @@
             </TextBox>
 
             <!-- Password -->
-            <PasswordBox x:Name="pwdPassword" Height="40" Margin="52,50,40,0" FontSize="18" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light">
+            <PasswordBox x:Name="pwdPassword" Height="40" Margin="52,50,40,0" FontSize="18" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151">
                 <PasswordBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
@@ -128,7 +128,14 @@
 
         <!-- Extra features -->
 
-        <Rectangle Grid.Column="1" Margin="285,0,0,0" Fill="White" Opacity="0.75" Grid.RowSpan="2"/>
+        <Rectangle Grid.Column="1" Margin="285,0,0,0" Opacity="0.75" Grid.RowSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF00FF74" Offset="0"/>
+                    <GradientStop Color="#FF0080FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="274,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Username" Grid.ColumnSpan="2" Grid.Row="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
