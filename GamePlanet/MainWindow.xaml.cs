@@ -57,6 +57,7 @@ namespace GamePlanet
                 shop.Show();
                 this.Close();
             }
+
         }
     }
 

@@ -27,6 +27,7 @@ namespace GamePlanet
         public Shop()
         {
             InitializeComponent();
+            
             FillData();
         }
 

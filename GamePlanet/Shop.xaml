@@ -13,6 +13,7 @@
             <RowDefinition Height="153*"/>
         </Grid.RowDefinitions>
         <DockPanel Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF272727" Width="932">
+            <TextBox x:Name="txbProfile" Height="40" Width="200" Text="{Binding Path=LoggedUser.Username}"></TextBox>
             <Button Content="Profiili" Margin="760 0 0 0" Height="40" Width="75"/>
             <Button Content="Ostoskori" Margin="10 0 10 0" Height="40" HorizontalAlignment="Right" Width="75"/>
         </DockPanel>
