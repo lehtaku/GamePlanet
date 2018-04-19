@@ -53,7 +53,7 @@ namespace GamePlanet
         private static string GetConnectionString()
         {
 
-            string password = "FjVZyBmmPjCP6TEaYt3gt3K3eYqB3db8";
+            string password = GamePlanet.Properties.Settings.Default.DBPassword; // DBPassword reference;
             return string.Format("Data source=mysql.labranet.jamk.fi;Initial Catalog=K8292_2;user=K8292;password={0}", password);
         }
     }

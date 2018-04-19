@@ -28,7 +28,7 @@ namespace GamePlanet
             server = "mysql.labranet.jamk.fi";
             database = "K8292_2";
             username = "K8292";
-            password = "FjVZyBmmPjCP6TEaYt3gt3K3eYqB3db8";
+            password = GamePlanet.Properties.Settings.Default.DBPassword; // DBPassword reference
             string connectionString = "SERVER=" + server + ";" + "DATABASE=" +
                 database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
 
