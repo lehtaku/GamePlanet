@@ -41,6 +41,21 @@ namespace GamePlanet
 
 
             }
+            catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        break;
+
+                    case 1045:
+                        MessageBox.Show("Invalid username/password, please try again");
+                        break;
+                }
+                return 0;
+            }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
