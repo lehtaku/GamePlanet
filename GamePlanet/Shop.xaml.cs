@@ -52,8 +52,11 @@ namespace GamePlanet
 
         private void dgProducts_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            // On click show product information
             stpProductinfo.Visibility = System.Windows.Visibility.Visible;
+
+            // Bind product information
+
             object item = dgProducts.SelectedItem;
             string title = (dgProducts.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
             prodTitle.Text = title;
