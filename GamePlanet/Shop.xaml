@@ -25,7 +25,7 @@
             <StackPanel HorizontalAlignment="Left" Width="861" RenderTransformOrigin="0.474,0.416" Margin="51,73,0,0" Height="268" VerticalAlignment="Top">
                 <TextBlock TextWrapping="Wrap" Text="Products" FontSize="24" Margin="10 10 10 8" TextAlignment="Center" Foreground="{x:Null}"/>
 
-                <DataGrid Name="dgProducts" SelectionMode="Single" MaxHeight="200" AutoGenerateColumns="False" Margin="5 0 5 5" SelectionChanged="dgProducts_SelectionChanged" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}" >
+                <DataGrid Name="dgProducts" SelectionMode="Single" MaxHeight="200" AutoGenerateColumns="False" Margin="5 0 5 5" SelectionChanged="dgProducts_SelectionChanged" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}" Cursor="Hand" >
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
                             <DataGridTemplateColumn.CellTemplate>
@@ -38,6 +38,11 @@
                         <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="55" FontSize="25" Visibility="Hidden"/>
                         <DataGridTextColumn Header="Price (€)" Binding="{Binding Price}" Width="55" FontSize="25"/>
                     </DataGrid.Columns>
+                    <DataGrid.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="WhiteSmoke"/>
+                        
+                    </DataGrid.Resources>
+
 
                 </DataGrid>
 
