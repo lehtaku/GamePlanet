@@ -50,7 +50,20 @@ namespace GamePlanet
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
+            // FirstName, LastName, UserName, Email, Password
+            string email = txbEmail.Text;
+            string uname = txbUsername.Text;
+            string fname = txbFirstname.Text;
+            string lname = txbLastname.Text;
+            string pword = pwdPassword.Password;
 
+            int createuser = DBLogin.MySQLCreate(fname, lname,uname,email,pword);
+            if ( createuser == 1)
+            {
+                MainWindow mainwindow = new MainWindow();
+                mainwindow.Show();
+                this.Close();
+            }
         }
     }
 }
