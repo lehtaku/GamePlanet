@@ -95,11 +95,6 @@
    
                     </Button>
                     <Button x:Name ="btnExit" Content="Exit" Margin="30,250,17,390" Padding="7" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF257058" Foreground="White" Click="btnExit_Click">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Button.Resources>
                     </Button>
                 </StackPanel>
 
