@@ -57,13 +57,13 @@ namespace GamePlanet
             string lname = txbLastname.Text;
             string pword = pwdPassword.Password;
 
-            int createuser = DBLogin.MySQLCreate(fname, lname,uname,email,pword);
-            if ( createuser == 1)
-            {
-                MainWindow mainwindow = new MainWindow();
-                mainwindow.Show();
-                this.Close();
-            }
+            DBLogin.MySQLCreate(fname, lname, uname, email, pword);
+
+
+            MainWindow mainwindow = new MainWindow();
+            mainwindow.Show();
+            this.Close();
+
         }
     }
 }

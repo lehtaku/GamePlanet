@@ -35,11 +35,13 @@ namespace GamePlanet
                     if (result > 0)
                     {
                         MessageBox.Show("Login Success");
+                        conn.Close();
                         return result;
                     }
                     else
                     {
                         MessageBox.Show("Username or Password is incorrect");
+                        conn.Close();
                         return result;
                     }
                 }
@@ -70,7 +72,7 @@ namespace GamePlanet
 
         }
 
-        public static int MySQLCreate(string firstname, string lastname, string username, string email, string password)
+        public static void MySQLCreate(string firstname, string lastname, string username, string email, string password)
         {
 
             try
@@ -81,25 +83,19 @@ namespace GamePlanet
                 {
 
                     conn.Open();
-                    MySqlCommand cmd = new MySqlCommand(@"INSERT INTO User (FirstName, LastName, UserName, Email, Password, CreatedAt) VALUES (@fname, @lname, @uname, @email, @pword, NOW()", conn);
-                    cmd.Parameters.AddWithValue("@fname", firstname);
-                    cmd.Parameters.AddWithValue("@lname", lastname);
-                    cmd.Parameters.AddWithValue("@uname", username);
-                    cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@pword", password);
+                    MySqlCommand comm = conn.CreateCommand();
+                    comm.CommandText = "INSERT INTO User(FirstName, LastName, Username, Email, Password, CreatedAt) VALUES(@fname, @lname, @uname, @email, @pword, @cat)";
+                    comm.Parameters.AddWithValue("@fname", firstname);
+                    comm.Parameters.AddWithValue("@lname", lastname);
+                    comm.Parameters.AddWithValue("@uname", username);
+                    comm.Parameters.AddWithValue("@email", email);
+                    comm.Parameters.AddWithValue("@pword", password);
+                    comm.Parameters.AddWithValue("@cat", "NOW()");
+                    comm.ExecuteNonQuery();
+                    conn.Close();
 
                     // Check if create user succeeded
-                    int result = Convert.ToInt32(cmd.ExecuteScalar());
-                    if (result > 0)
-                    {
-                        MessageBox.Show("Created user successfully!");
-                        return result;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error occured! Are you sure you filled in all the required fields?");
-                        return result;
-                    }
+
                 }
 
 
@@ -116,13 +112,13 @@ namespace GamePlanet
                         MessageBox.Show("Invalid username/password, please try again");
                         break;
                 }
-                return 0;
+                
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return 0;
+                
             }
 
 
