@@ -13,8 +13,8 @@
                 <ImageBrush ImageSource="Media/storebg.png"/>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="621*"/>
-                <RowDefinition Height="68*"/>
+                <RowDefinition Height="526.5"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
 
             <StackPanel HorizontalAlignment="Left" Width="861" RenderTransformOrigin="0.474,0.416" Margin="51,73,0,0" Height="268" VerticalAlignment="Top">
@@ -84,27 +84,15 @@
 
                 <StackPanel>
 
-                    <Button x:Name ="btnLogin" Content="Profile" Margin="30,200,17,0" Padding="7" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF2B5091" Foreground="White">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Button.Resources>
+                    <Button x:Name ="btnLogin" Content="Profile" Margin="30,200,17,0" Padding="7" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White">
+
                     </Button>
 
-                    <Button x:Name ="btnLogin2" Content="Profile" Margin="30,20,17,0" Padding="7" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF2B5091" Foreground="White">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Button.Resources>
+                    <Button x:Name ="btnLogin2" Content="Profile" Margin="30,20,17,0" Padding="7" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White">
+ 
                     </Button>
-                    <Button x:Name ="btnLogin3" Content="Profile" Margin="30,20,17,0" Padding="7" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF2B5091" Foreground="White">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Button.Resources>
+                    <Button x:Name ="btnLogin3" Content="Profile" Margin="30,20,17,0" Padding="7" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White">
+   
                     </Button>
                     <Button x:Name ="btnExit" Content="Exit" Margin="30,250,17,390" Padding="7" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF257058" Foreground="White" Click="btnExit_Click">
                         <Button.Resources>
