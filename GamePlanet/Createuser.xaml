@@ -50,7 +50,7 @@
 
         <!-- Login control properties -->
 
-        <StackPanel Grid.ColumnSpan="2" Height="610" Margin="0,-106,256,-93" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="386" Grid.RowSpan="2">
+        <StackPanel Grid.ColumnSpan="2" Height="504" Margin="-39,0,307,-34" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="386" Grid.Row="1">
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <RotateTransform Angle="-90"/>
@@ -59,25 +59,6 @@
 
             <!-- Welcome message -->
 
-            <!-- Username -->
-
-            <!-- Password -->
-            <!-- Username -->
-
-            <!-- Password -->
-            <!-- Username -->
-
-            <!-- Password -->
-            <!-- Username -->
-
-            <!-- Password -->
-            <!-- Username -->
-
-            <!-- Password -->
-            <!-- Username -->
-
-            <!-- Password -->
-            <!-- Username -->
 
             <TextBox x:Name="txbUsername" Height="45" Margin="52,300,0,0" FontSize="16" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,0" CaretBrush="White" HorizontalAlignment="Left" Width="294">
                 <TextBox.Resources>
@@ -100,13 +81,13 @@
                     </LinearGradientBrush>
                 </TextBox.Background>
             </TextBox>
-            <PasswordBox x:Name="pwdPassword" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
-                <PasswordBox.Resources>
+            <TextBox x:Name="txbEmail" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
+                <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
                     </Style>
-                </PasswordBox.Resources>
-                <PasswordBox.Background>
+                </TextBox.Resources>
+                <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
                             <TransformGroup>
@@ -119,29 +100,8 @@
                         <GradientStop Color="White" Offset="0"/>
                         <GradientStop Color="#FF080C17" Offset="0.01"/>
                     </LinearGradientBrush>
-                </PasswordBox.Background>
-            </PasswordBox>
-            <PasswordBox x:Name="pwdPassword_Copy" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
-                <PasswordBox.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="4"/>
-                    </Style>
-                </PasswordBox.Resources>
-                <PasswordBox.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <LinearGradientBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FF080C17" Offset="0.01"/>
-                    </LinearGradientBrush>
-                </PasswordBox.Background>
-            </PasswordBox>
+                </TextBox.Background>
+            </TextBox>
 
             <!-- Password -->
 
@@ -229,15 +189,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="310,483,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Firstname" Grid.Row="1" Grid.ColumnSpan="2">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-90.0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform></TextBlock>
         <StackPanel Grid.ColumnSpan="2" Height="610" Margin="0,-25,256,324" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="386" Grid.RowSpan="2">
             <StackPanel.RenderTransform>
                 <TransformGroup>
@@ -245,11 +196,9 @@
                 </TransformGroup>
             </StackPanel.RenderTransform>
 
-            <!-- Welcome message -->
+            <!-- User information for create user method -->
 
-            <!-- Username -->
-
-            <TextBox x:Name="txbUsername1" Height="45" Margin="52,300,0,0" FontSize="16" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,0" CaretBrush="White" HorizontalAlignment="Left" Width="294">
+            <TextBox x:Name="txbFirstname" Height="45" Margin="52,300,0,0" FontSize="16" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,0" CaretBrush="White" HorizontalAlignment="Left" Width="294">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
@@ -270,13 +219,13 @@
                     </LinearGradientBrush>
                 </TextBox.Background>
             </TextBox>
-            <PasswordBox x:Name="pwdPassword1" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
-                <PasswordBox.Resources>
+            <TextBox x:Name="txbLastname" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
+                <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
                     </Style>
-                </PasswordBox.Resources>
-                <PasswordBox.Background>
+                </TextBox.Resources>
+                <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
                             <TransformGroup>
@@ -289,9 +238,9 @@
                         <GradientStop Color="White" Offset="0"/>
                         <GradientStop Color="#FF080C17" Offset="0.01"/>
                     </LinearGradientBrush>
-                </PasswordBox.Background>
-            </PasswordBox>
-            <PasswordBox x:Name="pwdPassword_Copy1" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
+                </TextBox.Background>
+            </TextBox>
+            <PasswordBox x:Name="pwdPassword" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
                 <PasswordBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
@@ -314,6 +263,9 @@
             </PasswordBox>
 
         </StackPanel>
+        
+        <!-- Information text properties -->
+        
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="138,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Firstname" Grid.Row="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
