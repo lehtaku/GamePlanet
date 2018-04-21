@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GamePlanet"
         mc:Ignorable="d"
-        Title="Shop" Height="720" Width="1017" MinWidth="1041" MaxHeight="720" MinHeight="200" WindowStyle="None" MouseDown="Window_MouseDown" Background="#FF080C17">
-
+        Title="Shop" Height="720" Width="1067" MaxWidth="1067" MinWidth="1041" MaxHeight="720" MinHeight="200" WindowStyle="None" MouseDown="Window_MouseDown" Background="#FF080C17">
+    <ScrollViewer>
     <Grid x:Name="grdShop"  Margin="106,0,0,0">
         <Grid.Background>
             <ImageBrush ImageSource="Media/storebg.png"/>
@@ -19,7 +19,7 @@
             <Button Content="Profiili" Margin="760 0 0 0" Height="40" Width="75"/>
             <Button Content="Ostoskori" Margin="10 0 10 0" Height="40" HorizontalAlignment="Right" Width="75"/>
         </DockPanel>
-
+        
         <StackPanel HorizontalAlignment="Left" Width="810" RenderTransformOrigin="0.474,0.416" VerticalAlignment="Top" Margin="51,97,0,0" Height="247">
             <TextBlock TextWrapping="Wrap" Text="Products" FontSize="24" Margin="10 10 10 8" TextAlignment="Center" Foreground="{x:Null}"/>
 
@@ -67,6 +67,8 @@
                 </Rectangle>
             </StackPanel>
         </Grid>
+        
 
     </Grid>
+    </ScrollViewer>
 </Window>
