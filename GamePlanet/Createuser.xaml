@@ -1,0 +1,347 @@
+﻿<Window x:Class="GamePlanet.Createuser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GamePlanet"
+        mc:Ignorable="d"
+        Title="Createuser" Height="655.167" Width="412" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" Foreground="White">
+
+    <!-- Window background properties -->
+    <!-- IMPORTANT -->
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+
+    <!-- Window properties -->
+
+    <!-- Grid properties -->
+
+    <Grid RenderTransformOrigin="0.501,0.669" Margin="-26,-281,-216,27" Height="909" VerticalAlignment="Bottom" Background="#FF080C17" HorizontalAlignment="Left" Width="654" Opacity="0.75">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="136*"/>
+            <RowDefinition Height="275*"/>
+        </Grid.RowDefinitions>
+        <Grid.Effect>
+            <DropShadowEffect Color="#FF383737"/>
+        </Grid.Effect>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="165*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleY="1" ScaleX="1"/>
+                <SkewTransform AngleY="0" AngleX="0"/>
+                <RotateTransform Angle="90"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+
+        <!-- Login screen image properties -->
+
+        <!-- Logo properties -->
+
+        <Image Height="92" Margin="54,467,187,0" VerticalAlignment="Top" Source="Media/logo.png" RenderTransformOrigin="0.53,0.304" Panel.ZIndex="2" Grid.Row="1">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Media/logo.png"/>
+            </Image.OpacityMask>
+        </Image>
+
+        <!-- Login control properties -->
+
+        <StackPanel Grid.ColumnSpan="2" Height="610" Margin="0,-106,256,-93" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="386" Grid.RowSpan="2">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+
+            <!-- Welcome message -->
+
+            <!-- Username -->
+
+            <!-- Password -->
+            <!-- Username -->
+
+            <!-- Password -->
+            <!-- Username -->
+
+            <!-- Password -->
+            <!-- Username -->
+
+            <!-- Password -->
+            <!-- Username -->
+
+            <!-- Password -->
+            <!-- Username -->
+
+            <!-- Password -->
+            <!-- Username -->
+
+            <TextBox x:Name="txbUsername" Height="45" Margin="52,300,0,0" FontSize="16" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,0" CaretBrush="White" HorizontalAlignment="Left" Width="294">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </TextBox.Resources>
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="White"/>
+                        <GradientStop Color="#FF080C17" Offset="0.01"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <PasswordBox x:Name="pwdPassword" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </PasswordBox.Resources>
+                <PasswordBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF080C17" Offset="0.01"/>
+                    </LinearGradientBrush>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <PasswordBox x:Name="pwdPassword_Copy" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </PasswordBox.Resources>
+                <PasswordBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF080C17" Offset="0.01"/>
+                    </LinearGradientBrush>
+                </PasswordBox.Background>
+            </PasswordBox>
+
+            <!-- Password -->
+
+            <!-- Login button-->
+
+        </StackPanel>
+
+        <!-- Extra features -->
+
+        <Rectangle Grid.Column="1" Margin="285,0,0,0" Opacity="0.75" Grid.RowSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF00FF74" Offset="0"/>
+                    <GradientStop Color="#FF0080FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="138,481,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Username" Grid.Row="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="228,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Email" Grid.Row="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+
+        <TextBlock HorizontalAlignment="Left" Height="72" Margin="-2,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" FontSize="24" Grid.Row="1" Text="Create new user" >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="50,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Ready to create new user?" Grid.Column="1" Grid.Row="1" FontSize="10" Cursor="Hand">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <Button x:Name ="btnCreate" Content="Create User" Margin="16,113,14,442" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnLogin_Click" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name ="btnCancel" Content="Cancel" Margin="0,0,-59,440" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B5091" Foreground="White" Click="btnLogin_Click" HorizontalAlignment="Right" Width="294" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Height="55" VerticalAlignment="Bottom">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="310,483,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Firstname" Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <StackPanel Grid.ColumnSpan="2" Height="610" Margin="0,-25,256,324" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="386" Grid.RowSpan="2">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-90"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+
+            <!-- Welcome message -->
+
+            <!-- Username -->
+
+            <TextBox x:Name="txbUsername1" Height="45" Margin="52,300,0,0" FontSize="16" VerticalContentAlignment="Center" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,0" CaretBrush="White" HorizontalAlignment="Left" Width="294">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </TextBox.Resources>
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="White"/>
+                        <GradientStop Color="#FF080C17" Offset="0.01"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <PasswordBox x:Name="pwdPassword1" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </PasswordBox.Resources>
+                <PasswordBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF080C17" Offset="0.01"/>
+                    </LinearGradientBrush>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <PasswordBox x:Name="pwdPassword_Copy1" Height="40" Margin="52,40,40,0" FontSize="16" VerticalContentAlignment="Center" Padding="15,0" FontFamily="Microsoft YaHei Light" Foreground="#FF515151" CaretBrush="White">
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </PasswordBox.Resources>
+                <PasswordBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF080C17" Offset="0.01"/>
+                    </LinearGradientBrush>
+                </PasswordBox.Background>
+            </PasswordBox>
+
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="138,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Firstname" Grid.Row="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="228,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Lastname" Grid.Row="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="310,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Password" Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+
+    </Grid>
+</Window>
+    
