@@ -204,5 +204,8 @@
   <ItemGroup>
     <Resource Include="Media\storebg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\profilelink.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
