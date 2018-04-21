@@ -76,11 +76,12 @@
 
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="110,650,-802,0" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="110,650,-802,0" HorizontalAlignment="Center" Opacity="0.7">
 
                     <Button x:Name ="btnLogin2" Content="Profile" Margin="10,20,10,0" Padding="20,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"> </Button>
                     <Button x:Name ="btnLogin4" Content="Profile" Margin="10,20,10,0" Padding="20,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
                     <Button x:Name ="btnLogin3" Content="Profile" Margin="10,20,10,0" Padding="20,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"> </Button>
+                    <Button x:Name ="btnLogin1" Content="Profile" Margin="10,20,10,0" Padding="20,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
 
                 </StackPanel>
 
