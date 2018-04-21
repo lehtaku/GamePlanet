@@ -48,7 +48,7 @@ namespace GamePlanet
 
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
 
         }

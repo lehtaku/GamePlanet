@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GamePlanet"
         mc:Ignorable="d"
-        Title="Createuser" Height="655.167" Width="412" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" Foreground="White">
+        Title="Createuser" Height="655.167" Width="909" WindowStyle="None" AllowsTransparency="True" MouseDown="Window_MouseDown" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" Foreground="White">
 
     <!-- Window background properties -->
     <!-- IMPORTANT -->
@@ -190,7 +190,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
 
-        <TextBlock HorizontalAlignment="Left" Height="18" Margin="50,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Ready to create new user?" Grid.Column="1" Grid.Row="1" FontSize="10" Cursor="Hand">
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="50,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.5,0.5" FontFamily="Microsoft YaHei UI Light" Text="Ready to create new user?" Grid.Column="1" Grid.Row="1" FontSize="10" Cursor="Hand">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -199,7 +199,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
-        <Button x:Name ="btnCreate" Content="Create User" Margin="16,113,14,442" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnLogin_Click" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Button x:Name ="btnCreate" Content="Create User" Margin="16,118,14,437" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnCreate_Click" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -214,7 +214,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name ="btnCancel" Content="Cancel" Margin="0,0,-59,440" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B5091" Foreground="White" Click="btnLogin_Click" HorizontalAlignment="Right" Width="294" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Height="55" VerticalAlignment="Bottom">
+        <Button x:Name ="btnCancel" Content="Cancel" Margin="0,0,-59,435" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B5091" Foreground="White" Click="btnLogin_Click" HorizontalAlignment="Right" Width="294" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Height="55" VerticalAlignment="Bottom">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
