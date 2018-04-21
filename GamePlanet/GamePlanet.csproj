@@ -201,5 +201,8 @@
     <Resource Include="Media\Content\sims4.jpg" />
     <Resource Include="Media\Content\starswarsbf.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\storebg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
