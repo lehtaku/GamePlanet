@@ -10,6 +10,9 @@ namespace GamePlanet
 {
     public class DBLogin
     {
+
+        // FOR USER CONTROL
+
         public static int MySQLLogin(string username, string password)
         {
 
