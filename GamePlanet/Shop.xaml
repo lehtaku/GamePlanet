@@ -7,68 +7,68 @@
         mc:Ignorable="d"
         Title="Shop" Height="720" Width="1067" MaxWidth="1067" MinWidth="1041" MaxHeight="720" MinHeight="200" WindowStyle="None" MouseDown="Window_MouseDown" Background="#FF080C17">
     <ScrollViewer>
-    <Grid x:Name="grdShop"  Margin="106,0,0,0">
-        <Grid.Background>
-            <ImageBrush ImageSource="Media/storebg.png"/>
-        </Grid.Background>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="621*"/>
-            <RowDefinition Height="68*"/>
-        </Grid.RowDefinitions>
-        <DockPanel Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF080C17" Width="932">
-            <Button Content="Profiili" Margin="760 0 0 0" Height="40" Width="75"/>
-            <Button Content="Ostoskori" Margin="10 0 10 0" Height="40" HorizontalAlignment="Right" Width="75"/>
-        </DockPanel>
-        
-        <StackPanel HorizontalAlignment="Left" Width="810" RenderTransformOrigin="0.474,0.416" VerticalAlignment="Top" Margin="51,97,0,0" Height="247">
-            <TextBlock TextWrapping="Wrap" Text="Products" FontSize="24" Margin="10 10 10 8" TextAlignment="Center" Foreground="{x:Null}"/>
+        <Grid x:Name="grdShop"  Margin="106,0,0,0">
+            <Grid.Background>
+                <ImageBrush ImageSource="Media/storebg.png"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="621*"/>
+                <RowDefinition Height="68*"/>
+            </Grid.RowDefinitions>
+            <DockPanel Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF080C17" Width="932">
+                <Button Content="Profiili" Margin="760 0 0 0" Height="40" Width="75"/>
+                <Button Content="Ostoskori" Margin="10 0 10 0" Height="40" HorizontalAlignment="Right" Width="75"/>
+            </DockPanel>
 
-            <DataGrid Name="dgProducts" MaxHeight="639" AutoGenerateColumns="False" Margin="5 0 5 5" SelectionChanged="dgProducts_SelectionChanged" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light">
-                <DataGrid.Columns>
-                    <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Image x:Name="imgProduct" Source="{Binding Image}" Margin="5 5 5 5" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" FontSize="15"/>
-                    <DataGridTextColumn Header="Price (€)" Binding="{Binding Price}" Width="55" FontSize="30"/>
-                </DataGrid.Columns>
+            <StackPanel HorizontalAlignment="Left" Width="861" RenderTransformOrigin="0.474,0.416" Margin="51,73,0,0" Height="268" VerticalAlignment="Top">
+                <TextBlock TextWrapping="Wrap" Text="Products" FontSize="24" Margin="10 10 10 8" TextAlignment="Center" Foreground="{x:Null}"/>
 
-            </DataGrid>
+                <DataGrid Name="dgProducts" MaxHeight="200" AutoGenerateColumns="False" Margin="5 0 5 5" SelectionChanged="dgProducts_SelectionChanged" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image x:Name="imgProduct" Source="{Binding Image}" Margin="5 5 5 5" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" FontSize="15"/>
+                        <DataGridTextColumn Header="Price (€)" Binding="{Binding Price}" Width="55" FontSize="25"/>
+                    </DataGrid.Columns>
 
-        </StackPanel>
-
-        <StackPanel HorizontalAlignment="Left" Height="305" Margin="20,384,0,0" VerticalAlignment="Top" Width="892" Orientation="Horizontal" Grid.RowSpan="2">
-            <StackPanel.Background>
-                <SolidColorBrush Color="#FF080C17" Opacity="0.5"/>
-            </StackPanel.Background>
-
-            <StackPanel VerticalAlignment="Top" Width="64" Height="500">
-                <Image Name="cvrImg" Height="450" Margin="40,20,40,20" />
-            </StackPanel>
-
-            <StackPanel VerticalAlignment="Top" Width="530" Height="353" >
-                <TextBlock TextWrapping="Wrap" Text="Tuotteen nimi" Name="prodTitle" Margin="50 50 50 50" FontSize="24" Foreground="White"/>
-                <TextBlock TextWrapping="Wrap" Text="TextBlock" Name="prodDesc" Margin="50 0 50 0" FontSize="14" Foreground="White"/>
+                </DataGrid>
 
             </StackPanel>
-        </StackPanel>
-        <Grid Margin="-99,0,912,0" Grid.RowSpan="2" Height="712" VerticalAlignment="Bottom">
-            <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Height="Auto">
-                <Rectangle Margin="-8,0,10,0" Opacity="0.75" VerticalAlignment="Bottom" Height="720">
-                    <Rectangle.Fill>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF00FF74" Offset="0"/>
-                            <GradientStop Color="#FF0080FF" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Rectangle.Fill>
-                </Rectangle>
+
+            <StackPanel HorizontalAlignment="Left" Height="305" Margin="20,384,0,0" VerticalAlignment="Top" Width="892" Orientation="Horizontal" Grid.RowSpan="2">
+                <StackPanel.Background>
+                    <SolidColorBrush Color="#FF080C17" Opacity="0.5"/>
+                </StackPanel.Background>
+
+                <StackPanel VerticalAlignment="Top" Width="64" Height="500">
+                    <Image Name="cvrImg" Height="450" Margin="40,20,40,20" />
+                </StackPanel>
+
+                <StackPanel VerticalAlignment="Top" Width="530" Height="353" >
+                    <TextBlock TextWrapping="Wrap" Text="Product" Name="prodTitle" Margin="50 50 50 50" FontSize="24" Foreground="White"/>
+                    <TextBlock TextWrapping="Wrap" Text="Description" Name="prodDesc" Margin="50 0 50 0" FontSize="14" Foreground="White"/>
+
+                </StackPanel>
             </StackPanel>
+            <Grid Margin="-99,0,912,0" Grid.RowSpan="2" Height="712" VerticalAlignment="Bottom">
+                <StackPanel HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Height="Auto">
+                    <Rectangle Margin="-8,0,10,0" Opacity="0.75" VerticalAlignment="Bottom" Height="720">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF00FF74" Offset="0"/>
+                                <GradientStop Color="#FF0080FF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </StackPanel>
+            </Grid>
+
+
         </Grid>
-        
-
-    </Grid>
     </ScrollViewer>
 </Window>
