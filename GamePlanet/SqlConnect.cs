@@ -91,8 +91,9 @@ namespace GamePlanet
                 {
                     Product prod = new Product();
                     prod.Image = reader.GetString(0);
-                    prod.Name = reader.GetString(1);
+                    prod.Name = reader.GetString(1);                   
                     prod.Price = reader.GetDouble(3);
+                    prod.Description = reader.GetString(2);
                     products.Add(prod);
                 }
                 return products;
