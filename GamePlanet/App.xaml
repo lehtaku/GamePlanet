@@ -6,8 +6,8 @@
     <Application.Resources>
         
         <!-- Scrollbar-->
-        
-        <Color x:Key="ControlLightColor">#D0D0D0</Color>
+
+        <Color x:Key="ControlLightColor">#FF080C17</Color>
         <Color x:Key="ControlMediumColor">#888888</Color>
         <Color x:Key="DisabledForegroundColor">#FF888888</Color>
 

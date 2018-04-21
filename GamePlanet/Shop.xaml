@@ -16,6 +16,7 @@
                 <RowDefinition Height="621*"/>
                 <RowDefinition Height="68*"/>
             </Grid.RowDefinitions>
+
             <DockPanel Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF080C17" Width="932">
                 <Button Content="Profiili" Margin="760 0 0 0" Height="40" Width="75"/>
                 <Button Content="Ostoskori" Margin="10 0 10 0" Height="40" HorizontalAlignment="Right" Width="75"/>
@@ -42,7 +43,7 @@
 
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Left" Height="305" Margin="51,384,0,0" VerticalAlignment="Top" Width="861" Orientation="Horizontal" Grid.RowSpan="2">
+            <StackPanel x:Name="stpProductinfo" HorizontalAlignment="Left" Height="305" Margin="51,384,0,0" VerticalAlignment="Top" Width="861" Orientation="Horizontal" Grid.RowSpan="2" Visibility="Hidden">
 
                 <StackPanel.Background>
                     <SolidColorBrush Color="#FF080C17" Opacity="0.5"/>
