@@ -17,10 +17,10 @@
             <Button Content="Ostoskori" Margin="10 0 10 0" Height="40" HorizontalAlignment="Right" Width="75"/>
         </DockPanel>
 
-        <StackPanel HorizontalAlignment="Left" Width="340" RenderTransformOrigin="0.474,0.416" VerticalAlignment="Top" Background="#FF555454">
-            <TextBlock TextWrapping="Wrap" Text="Tuotteet" FontSize="24" Margin="10 10 10 8" TextAlignment="Center"/>
+        <StackPanel HorizontalAlignment="Left" Width="810" RenderTransformOrigin="0.474,0.416" VerticalAlignment="Top" Background="#FF080C17" Margin="51,97,0,0" Height="247">
+            <TextBlock TextWrapping="Wrap" Text="Products" FontSize="24" Margin="10 10 10 8" TextAlignment="Center"/>
 
-            <DataGrid Name="dgProducts" MaxHeight="639"  AutoGenerateColumns="False" Margin="5 0 5 5" SelectionChanged="dgProducts_SelectionChanged">
+            <DataGrid Name="dgProducts" MaxHeight="639" AutoGenerateColumns="False" Margin="5 0 5 5" SelectionChanged="dgProducts_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
@@ -32,13 +32,14 @@
                     <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" />
                     <DataGridTextColumn Header="Price (€)" Binding="{Binding Price}" Width="55" />
                 </DataGrid.Columns>
+
             </DataGrid>
 
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Left" Height="639" Margin="340,50,0,0" VerticalAlignment="Top" Width="572" Orientation="Horizontal" Background="#FF080C17" Grid.RowSpan="2">
+        <StackPanel HorizontalAlignment="Left" Height="363" Margin="20,326,0,0" VerticalAlignment="Top" Width="892" Orientation="Horizontal" Background="#FF080C17" Grid.RowSpan="2">
 
-            <StackPanel VerticalAlignment="Top" Width="400" Height="500">
+            <StackPanel VerticalAlignment="Top" Width="64" Height="500">
                 <Image Name="cvrImg" Height="450" Margin="40,20,40,20" />
             </StackPanel>
 
