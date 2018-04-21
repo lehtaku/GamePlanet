@@ -60,6 +60,13 @@ namespace GamePlanet
             }
 
         }
+
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
+        {
+            Createuser create = new Createuser();
+            create.Show();
+            this.Close();
+        }
     }
 
 

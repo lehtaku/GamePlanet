@@ -169,7 +169,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
-        <Button x:Name ="btnCreate" Content="Create User" Margin="75,40,-45,187" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnLogin_Click" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name ="btnCreate" Content="Create User" Margin="75,40,-45,187" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnCreate_Click" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
