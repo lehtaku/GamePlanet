@@ -54,8 +54,8 @@ namespace GamePlanet
             int login = DBLogin.MySQLLogin(name, pwd);
             if (login == 1)
             {
-                Shop shop = new Shop();
-                shop.Show();
+                Profile account = new Profile(name);
+                account.Show();
                 this.Close();
             }
 

@@ -70,6 +70,13 @@ namespace GamePlanet
         {
             this.Close();
         }
+
+        private void btnProfile_Click(object sender, RoutedEventArgs e)
+        {
+            Profile profile = new Profile();
+            profile.Show();
+            this.Close();
+        }
     }
 
 }

@@ -89,6 +89,7 @@
       <DependentUpon>Shop.xaml</DependentUpon>
     </Compile>
     <Compile Include="SqlConnect.cs" />
+    <Compile Include="User.cs" />
     <Page Include="Createuser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -206,6 +207,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Media\profilelink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\Avatar\blank-avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Media\Avatar\avatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

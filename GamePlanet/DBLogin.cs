@@ -124,6 +124,44 @@ namespace GamePlanet
 
         }
 
+        public static User MySQLGetProfile(string username)
+        {
+            try
+            {
+                string connStr = GetConnectionString();
+                User account = new User();
+
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+
+                    MySqlCommand comm = conn.CreateCommand();
+                    comm.CommandText = "SELECT UserID, FirstName, LastName, UserName, Email, AvatarPath, Description FROM User WHERE UserName = '" + username + "'";
+
+                    using (MySqlDataReader reader = comm.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            account.UserID = reader.GetInt32(0);
+                            account.Firstname = reader.GetString(1);
+                            account.Lastname = reader.GetString(2);
+                            account.Username = reader.GetString(3);
+                            account.Email = reader.GetString(4);
+                            account.AvatarPath = reader.GetString(5);
+                            account.Description = reader.GetString(6);
+                        }
+                    }
+                    conn.Close();
+                    return account;
+                }
+            } 
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
         private static string GetConnectionString()
         {
 
