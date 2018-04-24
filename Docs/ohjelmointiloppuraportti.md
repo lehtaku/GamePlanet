@@ -441,6 +441,55 @@ Todella hienoa huomata, miten paljon on kehittynyt ohjelmoinninperusteet-opintoj
 
 Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremmin, eikä niin miettiä yksittäisiä osioita joista rakentaa sovellus. Mutta koska tämä oli ensimmäinen kerta luodessa jokseenkin kokonaista ohjelmaa WPF:llä, sekä C# oli ennakoitavissa, että tällaisia ongelmia syntyy. Mutta virheistä oppii. 
 
+### Yleiskuva sovelluksesta:
+
+Koska halusimme luoda uniikin käyttöliittymän, jouduimme luomaan käytettäviä asioita, kuten scrollbar alusta alkaen:
+
+```XAML
+ <!-- Scrollbar-->
+
+        <Color x:Key="ControlLightColor">#FF080C17</Color>
+        <Color x:Key="ControlMediumColor">#FF080C17</Color>
+        <Color x:Key="DisabledForegroundColor">#FF080C17</Color>
+
+        <Style x:Key="ScrollBarLineButtonStyle" TargetType="{x:Type RepeatButton}">
+            <Setter Property="SnapsToDevicePixels"  Value="True" />
+            <Setter Property="OverridesDefaultStyle"    Value="true" />
+            <Setter Property="Focusable"    Value="false" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RepeatButton}">
+                        <Border x:Name="Border" Margin="1" CornerRadius="2" BorderThickness="1">
+                            <Border.Background>
+                                <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                            </Border.Background>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="Arrow"
+                                          Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                                <EasingColorKeyFrame KeyTime="0"
+                                   Value="{StaticResource DisabledForegroundColor}" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Path x:Name="Arrow" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}">
+                                <Path.Fill>
+                                    <SolidColorBrush Color="Black"/>
+                                </Path.Fill>
+                            </Path>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+```
+
 Ohjelma sisältää todella paljon SQL kyselyitä, ja on jatkuvasti vuorovaikutuksessa tietokannan kanssa.
 
 ```C
