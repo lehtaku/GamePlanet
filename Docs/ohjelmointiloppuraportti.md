@@ -443,6 +443,8 @@ Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremm
 
 ### Yleiskuva sovelluksesta, esimerkein:
 
+         
+
 Hyödynsimme Googlen material.io palvelua rakentaaksemme oikean värimaailman sovellukselle:
 
 ![](media/Material.PNG)
@@ -558,6 +560,25 @@ Poikkeuksien hallinnassa käytimme pääosin switch-case rakennetta tunnistaakse
             }
             ...
 ```
+
+Kirjoitimme koodin mahdollisimman itseselitteiseksi. Käytännössä kuka vain, joka vain osaa lukea, pystyy tulkitsemaan koodia ja sen toimintoja. Kommentointia on ja löytyy, mutta vain ilmoittamaan esimerkiksi funktion päätarkoitus.
+
+```C
+// On click show product information
+            stpProductinfo.Visibility = System.Windows.Visibility.Visible;
+
+            // Bind product information
+
+            object item = dgProducts.SelectedItem;
+            string title = (dgProducts.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
+            prodTitle.Text = title;
+
+            // Show description
+
+            Product row = (Product)dgProducts.SelectedItems[0];
+            string description = row.Description;
+            txbDescription.Text = description;
+```   
 
 Sekä tietokannasta tulleen tiedon hyödyntämistä:
 
