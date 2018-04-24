@@ -93,7 +93,6 @@
     <Compile Include="Shop.xaml.cs">
       <DependentUpon>Shop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SqlConnect.cs" />
     <Compile Include="User.cs" />
     <Page Include="Cart.xaml">
       <SubType>Designer</SubType>
