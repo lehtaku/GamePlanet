@@ -57,6 +57,9 @@ namespace GamePlanet
                 Profile account = new Profile(name);
                 account.Show();
                 this.Close();
+            } else
+            {
+                MessageBox.Show("Error occurred. Cannot contact server");
             }
 
         }
