@@ -62,7 +62,7 @@ suunnitelmaa.
 Ja vaikka tietokannassa on suhteellisen monimutkainen rakenne, tiesimme
 tarkalleen miten sen pitäisi toimia ja lopputulos: Se toimi kuten ajattelimme!
 
-Tässä testasimme omia kykyjämme, sekä parityö taitoja. Loimme ratkaisun, jota ei
+Tässä testasimme omia kykyjämme, sekä parityötaitoja. Loimme ratkaisun, jota ei
 lähelläkään ole harjoitustehtävissä tai osaamistesteissä tullut vastaan.
 
 # Sovellus: 
@@ -76,7 +76,8 @@ Jotta tietokanta yhteys toimii
 
 ## 2. Tietoa ohjelmasta (mitä tekee, miksi etc)
 
-Ohjelma on 
+Ohjelma on client pelikaupalle.
+Tarkoituksena on siis käyttää kaupan ominaisuuksia käyttöliittymän avulla.
 
 ### Toiminalliset vaatimukset
 
