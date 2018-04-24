@@ -80,16 +80,18 @@ konfiguroitavat asiat
 
 ### Toiminalliset vaatimukset
 
-* Test
-*
-*
-*
+* Kirjaudu sisään
+* Selaa kauppaa
+* Selaa profiilia
+* Kommentoi profiilia
+* Luo käyttäjä
+* Osta peli
 
 ### Ei-toiminnalliset vaatimukset
 
-* Test
-*
-*
+* Käyttöliittymä on selkeä
+* Käyttöliittymä on Englanniksi
+* Sovellus saa yhteyden tietokantaan
 
 
 listaa toteutetut toiminnalliset vaatimukset
