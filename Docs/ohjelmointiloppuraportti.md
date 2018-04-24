@@ -37,7 +37,7 @@ Yhteenveto projektista:
 Teimme käytännössä kaiken tasavertaisesti, jaoimme työtehtävä ja aloimme
 työstämään projektia Githubissa.
 
-Ongelmakohtia ei oikeastaan tullut, suunnittelimme alkuun todella huolellisesti
+Ongelmakohtia ei oikeastaan tullut paitsi lisenssien ostossa, suunnittelimme alkuun todella huolellisesti
 tietokannan rakenteen, joka loppujenlopuksi oikeasti oli toimiva ratkaisua ja
 suuremmilta ongelmilta vältyttiin.
 
@@ -87,6 +87,8 @@ Tarkoituksena on siis käyttää kaupan ominaisuuksia käyttöliittymän avulla.
 * Kommentoi profiilia
 * Luo käyttäjä
 * Osta peli
+* Lisää pelejä ostoskoriin
+* Navigoida sivujen välillä
 
 ### Ei-toiminnalliset vaatimukset
 
