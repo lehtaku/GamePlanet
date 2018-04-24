@@ -431,7 +431,9 @@ Kehittää käyttöliittymää, lisätä animaatioita, sekä featureita ja refak
 
 ## 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
 
-WPF XAML oikeaoppinen käyttöliittymän rakentaminen oli haaste, koska täytyi opiskella paljon uutta, mutta tästä selviydyimme vaikka siisteyttä olisi voinut parantaa.
+WPF XAML oikeaoppinen käyttöliittymän rakentaminen oli haaste, koska täytyi opiskella paljon uutta, mutta tästä selviydyimme vaikka siisteyttä olisi voinut parantaa. Mutta onnistuimme luomaan käyttäjäkokemuksellisesti onnistuneen tuotteen.
+UX/UI ovat selkeät ja käyttäjän ei tarvitse lukea käyttöohjeita ymmärtääkseen miten tuote toimii.
+(Eli ei siis mitään vanhaa VISMA tuotetta, josta ei ota selvää)
 
 Databinding, sekä tietokannat selvästi olivat haaste, mutta itsenäisen opiskelun jälkeen onnistuimme tässä.
 
