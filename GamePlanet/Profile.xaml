@@ -95,7 +95,7 @@
                     </DataGrid>
                 </ScrollViewer>
             </DockPanel>
-            <TextBox HorizontalAlignment="Left" Height="29" Text="Comment" Margin="801,399,0,284" TextWrapping="Wrap" Width="270" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,5" CaretBrush="White">
+            <TextBox x:Name="txbComment" HorizontalAlignment="Left" Height="29" Text="Comment" Margin="801,399,0,284" TextWrapping="Wrap" Width="270" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,5" CaretBrush="White">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
@@ -118,7 +118,7 @@
                 </TextBox.Background>
 
             </TextBox>
-            <Button x:Name="btnComment" Content="Comment" Margin="801,443,233,238" FontFamily="Microsoft YaHei" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" RenderTransformOrigin="0.5,0.5">
+            <Button x:Name="btnComment" Content="Comment" Margin="801,443,233,238" FontFamily="Microsoft YaHei" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" RenderTransformOrigin="0.5,0.5" Click="btnComment_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="7"/>

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+
 namespace GamePlanet
 {
     public class DBLogin
@@ -216,7 +217,7 @@ namespace GamePlanet
                     conn.Open();
 
                     MySqlCommand comm1 = conn.CreateCommand();
-                    comm1.CommandText = "SELECT CommentTXT, CreatedAT FROM Comment WHERE ProfileID=(SELECT pr.ProfileID FROM Profile as pr WHERE UserID='" + userId + "')";
+                    comm1.CommandText = "SELECT CommentTXT, CONCAT(CreatedAT) as CreatedAtS FROM Comment  WHERE ProfileID=(SELECT pr.ProfileID FROM Profile as pr WHERE UserID='" + userId + "')";
 
                     using (MySqlDataReader reader = comm1.ExecuteReader())
                     {
@@ -224,7 +225,14 @@ namespace GamePlanet
                         {
                             Comment cmt = new Comment();
                             cmt.CommentTXT = reader.GetString(0);
-                            cmt.CreatedAt = reader.GetString(1);
+
+                            if (Convert.ToString(reader.GetString(1)) != null)
+                            {
+                                cmt.CreatedAt = reader.GetString(1);
+                            } else
+                            {
+                                cmt.CreatedAt = "Not available";
+                            }
    
                             comments.Add(cmt);
                         }
@@ -243,11 +251,77 @@ namespace GamePlanet
             }
         }
 
+        public static void AddComment(string comment, int userId)
+        {
+
+            try
+            {
+                
+                string connStr = GetConnectionString();
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+                    MySqlCommand comm2 = conn.CreateCommand();
+                    comm2.CommandText = "SELECT pr.ProfileID FROM Profile as pr WHERE UserID = '" + userId + "'";
+                    comm2.ExecuteNonQuery();
+                    using (MySqlDataReader reader = comm2.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int test = Convert.ToInt32(reader.GetString(0));
+                        }
+                    }
+
+                    MySqlCommand comm = conn.CreateCommand();
+                    
+                    comm.CommandText = @"INSERT INTO Comment(CommentTXT, ProfileID, CreatedAt, fk_CommentID) VALUES(@comment, @profileid, @created, @commentid)";
+                    comm.Parameters.AddWithValue("@comment", comment);
+                    comm.Parameters.AddWithValue("@profileid", "3" );
+                    comm.Parameters.AddWithValue("@created", "NOW()");
+                    comm.Parameters.AddWithValue("@commentid", "NULL");
+                    comm.ExecuteNonQuery();
+                    conn.Close();
+
+                    // Check if create user succeeded
+
+                }
+
+
+            }
+            catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        break;
+
+                    case 1045:
+                        MessageBox.Show("Invalid username/password, please try again");
+                        break;
+
+                    default:
+                        MessageBox.Show(ex.Message);
+                        break;
+
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+
+        }
+
         private static string GetConnectionString()
         {
 
             string password = GamePlanet.Properties.Settings.Default.DBPassword; // DBPassword reference;
-            return string.Format("Data source=mysql.labranet.jamk.fi;Initial Catalog=K8292_2;user=K8292;password={0}", password);
+            return string.Format("Data source=mysql.labranet.jamk.fi;Initial Catalog=K8292_2;user=K8292;password={0};allow zero datetime=false", password);
         }
     }
 
