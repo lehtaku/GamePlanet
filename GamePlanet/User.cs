@@ -15,10 +15,16 @@ namespace GamePlanet
         public string Username { get; set; }
         public string Description { get; set; }
         public string AvatarPath { get; set; }
+        public List<Product> Products { get; set; }
+        
 
         public User()
         {
-
+            Products = new List<Product>();
         }
+
     }
+
+
+    
 }

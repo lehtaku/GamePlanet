@@ -80,6 +80,7 @@
       <DependentUpon>Createuser.xaml</DependentUpon>
     </Compile>
     <Compile Include="DBLogin.cs" />
+    <Compile Include="Globals.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Profile.xaml.cs">

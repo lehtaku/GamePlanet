@@ -73,7 +73,8 @@ namespace GamePlanet
 
         private void btnProfile_Click(object sender, RoutedEventArgs e)
         {
-            Profile profile = new Profile();
+            string username = Globals.Username;
+            Profile profile = new Profile(username);
             profile.Show();
             this.Close();
         }

@@ -27,6 +27,22 @@
                 </ScrollViewer>
             </DockPanel>
 
+            <DockPanel HorizontalAlignment="Left" Height="590" LastChildFill="False" Margin="334,65,0,0" VerticalAlignment="Top" Width="609">
+                <DataGrid Name="myProducts" VerticalAlignment="Top" Margin="50,30,50,30" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image x:Name="Image" Source="{Binding Image}" Margin="5 5 5 5" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" FontSize="15"/>
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="55" FontSize="25" Visibility="Hidden"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+
             <StackPanel Orientation="Horizontal" Margin="50 650 50 0" HorizontalAlignment="Center" Opacity="0.7">
 
                 <Button x:Name ="btnStore" Content="Store" Margin="10,20,10,0" Padding="20,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White" Click="btnStore_Click"></Button>

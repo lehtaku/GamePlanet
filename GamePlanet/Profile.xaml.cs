@@ -30,9 +30,15 @@ namespace GamePlanet
         {
             InitializeComponent();
             GetProfile(username);
+            GlobalizeUser(username);
         }
 
         // Methods
+        private void GlobalizeUser(string username)
+        {
+            Globals.Username = username;
+        }
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -56,9 +62,12 @@ namespace GamePlanet
                 PathToImgSource(account.AvatarPath);
             }
 
-            // Profile name etc..
+            // Profile's name etc..
             Fullname.Text = account.Firstname + " " + account.Lastname;
             Description.Text = account.Description;
+
+            // Profile's owned products
+            myProducts.ItemsSource = DBLogin.GetProfileProducts(account.UserID);
 
         }
 

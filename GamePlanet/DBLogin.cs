@@ -135,10 +135,11 @@ namespace GamePlanet
                 {
                     conn.Open();
 
-                    MySqlCommand comm = conn.CreateCommand();
-                    comm.CommandText = "SELECT UserID, FirstName, LastName, UserName, Email, AvatarPath, Description FROM User WHERE UserName = '" + username + "'";
+                    // Command to get profile
+                    MySqlCommand comm1 = conn.CreateCommand();
+                    comm1.CommandText = "SELECT UserID, FirstName, LastName, UserName, Email, AvatarPath, Description FROM User WHERE UserName = '" + username + "'";
 
-                    using (MySqlDataReader reader = comm.ExecuteReader())
+                    using (MySqlDataReader reader = comm1.ExecuteReader())
                     {
                         while (reader.Read())
                         {
@@ -151,10 +152,51 @@ namespace GamePlanet
                             account.Description = reader.GetString(6);
                         }
                     }
-                    conn.Close();
+                        conn.Close();
+
                     return account;
                 }
             } 
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public static List<Product> GetProfileProducts(int userId)
+        {
+            try
+            {
+                List<Product> products = new List<Product>();
+
+                string connStr = GetConnectionString();
+
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+
+                    MySqlCommand comm1 = conn.CreateCommand();
+                    comm1.CommandText = "SELECT Product.Image, Product.Name, Product.Description FROM Product WHERE ProductID IN (SELECT License.ProductID FROM License WHERE UserID = '"+ userId + "')";
+
+                    using (MySqlDataReader reader = comm1.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Product prod = new Product();
+                            prod.Image = reader.GetString(0);
+                            prod.Name = reader.GetString(1);
+                            prod.Description = reader.GetString(2);
+                            products.Add(prod);
+                        }
+                    }
+
+                    conn.Close();
+
+                    return products;
+                }
+
+            }
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
