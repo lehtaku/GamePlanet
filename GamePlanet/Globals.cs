@@ -9,6 +9,6 @@ namespace GamePlanet
     public static class Globals
     {
         public static string Username { get; set; }
-
+        public static List<Product> ShoppingCart = new List<Product>();
     }
 }

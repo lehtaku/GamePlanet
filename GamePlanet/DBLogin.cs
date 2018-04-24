@@ -18,7 +18,6 @@ namespace GamePlanet
 
             try
             {
-
                 string connStr = GetConnectionString();
                 //string sql = string.Format("SELECT UserName FROM User HAVING UserName={0}", user);
                 using (MySqlConnection conn = new MySqlConnection(connStr))

@@ -42,8 +42,7 @@ namespace GamePlanet
         {
             try
             {
-                SqlConnect connection = new SqlConnect();
-                dgProducts.ItemsSource = connection.GetProducts();
+                dgProducts.ItemsSource = DBProduct.GetProducts();
             }
             catch (Exception ex)
             {
@@ -116,7 +115,7 @@ namespace GamePlanet
             string prdName = row.Name;
 
             Cart cart = new Cart();
-            cart.AddProducts(prdImg, prdName, prdPrice, prdDescription);
+            // cart.AddProducts(prdImg, prdName, prdPrice, prdDescription);
 
         }
     }
