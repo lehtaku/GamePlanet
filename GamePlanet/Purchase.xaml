@@ -23,7 +23,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Button x:Name ="btnPurchase" Content="Purchase" Margin="299,501,315,101" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnCreate_Click" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name ="btnPurchase" Content="Purchase" Margin="299,501,315,101" FontFamily="Microsoft YaHei" FontSize="16" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" RenderTransformOrigin="0.5,0.5">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
