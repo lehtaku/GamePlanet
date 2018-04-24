@@ -18,6 +18,8 @@
 
             <StackPanel HorizontalAlignment="Left" Margin="218,60,0,0" VerticalAlignment="Top" Width="172" Height="179">
                 <TextBlock TextWrapping="Wrap" x:Name="Fullname" Text="{Binding}" Margin="0,0,-212,20" Foreground="White" FontSize="20" HorizontalAlignment="Right" Width="174" Height="35"/>
+                <Image x:Name="Avatar" Source="{Binding}" Height="174" Margin="0,-50,0,0">
+                </Image>
             </StackPanel>
 
             <DockPanel Margin="416,94,380,473">
