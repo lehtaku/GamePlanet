@@ -77,7 +77,7 @@
             </DockPanel>
 
             <TextBlock Text="Comments" Margin="791,146,42,539" Width="333" FontSize="16" Foreground="White"></TextBlock>
-            <DockPanel HorizontalAlignment="Left" Height="365" LastChildFill="False" Margin="787,193,0,0" VerticalAlignment="Top" Width="335" RenderTransformOrigin="0.5,0.5">
+            <DockPanel HorizontalAlignment="Left" Height="189" LastChildFill="False" Margin="786,193,0,0" VerticalAlignment="Top" Width="335" RenderTransformOrigin="0.5,0.5">
                 <DockPanel.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -95,6 +95,36 @@
                     </DataGrid>
                 </ScrollViewer>
             </DockPanel>
+            <TextBox HorizontalAlignment="Left" Height="29" Text="Comment" Margin="791,408,0,275" TextWrapping="Wrap" Width="270" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,5" CaretBrush="White">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </TextBox.Resources>
+
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="White"/>
+                        <GradientStop Color="#FF080C17" Offset="0.01"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+
+            </TextBox>
+            <Button Content="Comment" Margin="791,442,243,239" FontFamily="Microsoft YaHei" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnCreate_Click" RenderTransformOrigin="0.5,0.5">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="7"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
 
         </Grid>
