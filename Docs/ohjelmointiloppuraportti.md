@@ -70,13 +70,13 @@ lähelläkään ole harjoitustehtävissä tai osaamistesteissä tullut vastaan.
 ## 1. Asennus
 
 
-mitä asioita tehtävä ja huomioitava asennuksessa
-käytetyt=tarvittavat .NET Frameworkin ulkopuoliset kirjastot tai kilkkeet
-konfiguroitavat asiat
-
+Pitää varmistaa, että on yhteydessä Labranettiin. (Joko VPN yli, tai suoraan verkossa) 
+Jotta tietokanta yhteys toimii
 
 
 ## 2. Tietoa ohjelmasta (mitä tekee, miksi etc)
+
+Ohjelma on 
 
 ### Toiminalliset vaatimukset
 
@@ -430,6 +430,10 @@ Kehittää käyttöliittymää, lisätä animaatioita, sekä featureita ja refak
 WPF XAML oikeaoppinen käyttöliittymän rakentaminen oli haaste, koska täytyi opiskella paljon uutta, mutta tästä selviydyimme vaikka siisteyttä olisi voinut parantaa.
 
 Databinding, sekä tietokannat selvästi olivat haaste, mutta itsenäisen opiskelun jälkeen onnistuimme tässä.
+
+Kokonaisuudessaan oli ilo tehdä projektia ja oppia käyttämään versionhallintaa.
+Vaikka ongelmakohtia oli, niistä selviäminen oli todella palkitsevaa.
+Todella hienoa huomata, miten paljon on kehittynyt ohjelmoinninperusteet-opintojaksosta.
 
 
 
