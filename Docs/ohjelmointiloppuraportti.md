@@ -38,7 +38,7 @@ Teimme käytännössä kaiken tasavertaisesti, jaoimme työtehtävä ja aloimme
 työstämään projektia Githubissa.
 
 Ongelmakohtia ei oikeastaan tullut paitsi lisenssien ostossa, suunnittelimme alkuun todella huolellisesti
-tietokannan rakenteen, joka loppujenlopuksi oikeasti oli toimiva ratkaisua ja
+tietokannan rakenteen, joka loppujenlopuksi oikeasti oli toimiva ratkaisu ja
 suuremmilta ongelmilta vältyttiin.
 
 Eli juuri tuo mitä me taululla piirtelimme oikeasti oli todella lähellä
@@ -439,6 +439,7 @@ Kokonaisuudessaan oli ilo tehdä projektia ja oppia käyttämään versionhallin
 Vaikka ongelmakohtia oli, niistä selviäminen oli todella palkitsevaa.
 Todella hienoa huomata, miten paljon on kehittynyt ohjelmoinninperusteet-opintojaksosta.
 
+Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremmin, eikä niin miettiä yksittäisiä osioita joista rakentaa sovellus.
 
 
 
