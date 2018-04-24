@@ -461,6 +461,40 @@ Ohjelma sisältää todella paljon SQL kyselyitä, ja on jatkuvasti vuorovaikutu
             ...
 ```
 
+Sekä tietokannasta tulleen tiedon hyödyntämistä:
+
+```C
+ private void GetProfile(string username)
+        {
+            // Welcome message
+            User account = DBLogin.MySQLGetProfile(username);
+            Usrname.Text = "Welcome Back " + account.Username + "!";
+
+            // Avatar image
+            if (String.IsNullOrEmpty(account.AvatarPath))
+            {
+                string path = "Media/Avatar/blank-avatar.png";
+                PathToImgSource(path);
+            }
+            else
+            {               
+                PathToImgSource(account.AvatarPath);
+            }
+
+            // Profile's name etc..
+            Fullname.Text = account.Firstname + " " + account.Lastname;
+            Description.Text = account.Description;
+
+            // Profile's owned products
+            myProducts.ItemsSource = DBLogin.GetProfileProducts(account.UserID);
+
+            myComments.ItemsSource = DBLogin.GetProfileComments(account.UserID);
+
+        }
+        ...
+        
+```
+
 
 
 ## 7. Tekijät, vastuiden ja työmäärän jakautuminen
