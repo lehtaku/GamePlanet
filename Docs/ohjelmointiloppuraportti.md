@@ -441,6 +441,26 @@ Todella hienoa huomata, miten paljon on kehittynyt ohjelmoinninperusteet-opintoj
 
 Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremmin, eikä niin miettiä yksittäisiä osioita joista rakentaa sovellus. Mutta koska tämä oli ensimmäinen kerta luodessa jokseenkin kokonaista ohjelmaa WPF:llä, sekä C# oli ennakoitavissa, että tällaisia ongelmia syntyy. Mutta virheistä oppii. 
 
+Ohjelma sisältää todella paljon SQL kyselyitä, ja on jatkuvasti vuorovaikutuksessa tietokannan kanssa
+
+```C
+ catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        break;
+
+                    case 1045:
+                        MessageBox.Show("Invalid username/password, please try again");
+                        break;
+                }
+
+            }
+            ...
+```
+
 
 
 ## 7. Tekijät, vastuiden ja työmäärän jakautuminen
