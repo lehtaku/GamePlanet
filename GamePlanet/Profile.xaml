@@ -71,7 +71,7 @@
                     </Button.Background>
                 </Button>
                 <Button x:Name ="btnStore" Content="Store" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White" Click="btnStore_Click"></Button>
-                <Button x:Name ="btnLogin3" Content="#" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
+                <Button x:Name ="btnLogin3" Content="Exit" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White" Click="btnLogin3_Click"></Button>
                 <Button x:Name ="btnLogin1" Content="#"  Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
 
             </DockPanel>

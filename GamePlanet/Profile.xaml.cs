@@ -104,5 +104,10 @@ namespace GamePlanet
             GetProfile(Globals.Username);
             
         }
+
+        private void btnLogin3_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
