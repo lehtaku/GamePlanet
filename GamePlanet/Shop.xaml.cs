@@ -60,9 +60,15 @@ namespace GamePlanet
             object item = dgProducts.SelectedItem;
             string title = (dgProducts.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
             prodTitle.Text = title;
+
             Product row = (Product)dgProducts.SelectedItems[0];
             string description = row.Description;
             txbDescription.Text = description;
+
+            Product price = (Product)dgProducts.SelectedItems[0];
+            double prdPrice = price.Price;
+            string priceDisplay = ("Purchase " + prdPrice + "€").ToString();
+            btnPurchase.Content = priceDisplay;
 
         }
 
