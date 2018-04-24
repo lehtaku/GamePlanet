@@ -22,6 +22,15 @@ namespace GamePlanet
             return string.Join("", cart.Select(Product => "Name: " + Product.Name + " Price: " + Product.Price).ToArray());
         }
 
+        public void AddPrice (double value)
+        {
+            Totalprice += value;
+        }
+
+        public void AddSum(double value)
+        {
+            Cartsum += 1;
+        }
 
         public void Emptycart()
         {
