@@ -101,6 +101,8 @@ listaa ei-toiminnalliset vaatimukset sekä mahdolliset reunaehdot/rajoitukset
 
 ## 3. Kuvaruutukaappaukset tärkeimmistä käyttöliittymistä + lyhyet käyttöohjeet jollei "ilmiselvää"
 
+![](media/Login.PNG)
+
 
 ## 4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
 
