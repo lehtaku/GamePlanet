@@ -5,18 +5,9 @@ Loppuraportti - TTOS0300
 Gameplanet
 ----------
 
--   Leevi Kopakkala - K8292 \| K8292\@student.jamk.fi
+-   Leevi Kopakkala - K8292 \| <K8292\@student.jamk.fi>
 
 -   Aku Lehtonen - K9264 \| <K9264@student.jamk.fi>
-
-Arvosana ehdotukset:
-
--   Leevi Kopakkala 55/60
-
--   Aku Lehtonen 55/60
-
-    Vaikka ratkaisu ei välttämättä ole täydellinen, pääsimme molemmat haastamaan
-    itsemme ja kokeilemaan jotain täysin uutta.
 
 ![](media/63d8b35af6c497d3380f277be5b2e336.png)
 
@@ -427,14 +418,39 @@ Huomioitavaa käytössä
 
 ## 5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat
 
+Kehittää käyttöliittymää, lisätä animaatioita, sekä featureita ja refaktoroida koodia.
+
 
 ## 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
+
+WPF XAML oikeaoppinen käyttöliittymän rakentaminen oli haaste, koska täytyi opiskella paljon uutta, mutta tästä selviydyimme vaikka siisteyttä olisi voinut parantaa.
+
+Databinding, sekä tietokannat selvästi olivat haaste, mutta itsenäisen opiskelun jälkeen onnistuimme tässä.
 
 
 
 
 ## 7. Tekijät, vastuiden ja työmäärän jakautuminen
 
+Työmäärä jakautui tasaisesti tekijöiden kesken:
+
+-   Leevi Kopakkala - K8292 \| <K8292\@student.jamk.fi>
+
+-   Aku Lehtonen - K9264 \| <K9264@student.jamk.fi>
+
 
 ## 8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille
+
+Arvosana ehdotukset:
+
+-   Leevi Kopakkala 4
+
+-   Aku Lehtonen 4
+
+Vaikka ratkaisu ei välttämättä ole täydellinen, pääsimme molemmat haastamaan omat kykymme ja kokeilemaan jotain täysin uutta.
+Ohjelma hyödyntää kaikkia opintojaksolla opetettuja sisältöjä, sekä näiden lisäksi sovellus sisältää paljon tietokantaan liittyviä  asioita.
+
+Näiden lisäksi, kokeilimme uutta käyttöliittymän visuaalisuuden osalta, sekä opettelimme WPF:n liittyviä tekniikoita, mitkä eivät sisältyneet opintojaksoon.
+    
+    
 
