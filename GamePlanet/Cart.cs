@@ -9,6 +9,7 @@ namespace GamePlanet
     class Cart
     {
         public double Totalprice { get; set; }
+        public int Cartsum { get; set; }
         public List<Product> cart = new List<Product>();
 
         public void AddProducts(string image, string name, double price, string description)
