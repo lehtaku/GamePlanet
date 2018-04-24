@@ -111,8 +111,7 @@ listaa ei-toiminnalliset vaatimukset sekä mahdolliset reunaehdot/rajoitukset
 
 ![](media/17d8d87a8a6460ba52e80fb69d78e584.png)
 
-kuvaukset tietokannoista ml. tietokanta-kaavio
-laita tarvittaessa mukaan tietokannan luontiskriptit ja testidatan lisäysskriptit
+Lisäsimme testidataa perinteisillä SQL skripteillä käyttäen eri hallintaohjelmia, mutta myös käyttäen luotua ohjelmaa.
 
 Luonti:
 
