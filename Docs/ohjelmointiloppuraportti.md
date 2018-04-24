@@ -495,6 +495,26 @@ Sekä tietokannasta tulleen tiedon hyödyntämistä:
         
 ```
 
+Olennaisena osana oli siis databinding ja datagridien hyödyntäminen:
+
+```C
+
+<DataGrid Name="myProducts" MaxHeight="250" AutoGenerateColumns="False" Margin="5 0 5 5" Padding="10" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image x:Name="Image" Source="{Binding Image}" Margin="5 5 5 5" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" FontSize="15"/>
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="55" FontSize="25" Visibility="Hidden"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+```
+
 
 
 ## 7. Tekijät, vastuiden ja työmäärän jakautuminen
