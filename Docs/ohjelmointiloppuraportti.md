@@ -439,7 +439,7 @@ Kokonaisuudessaan oli ilo tehdä projektia ja oppia käyttämään versionhallin
 Vaikka ongelmakohtia oli, niistä selviäminen oli todella palkitsevaa.
 Todella hienoa huomata, miten paljon on kehittynyt ohjelmoinninperusteet-opintojaksosta.
 
-Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremmin, eikä niin miettiä yksittäisiä osioita joista rakentaa sovellus.
+Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremmin, eikä niin miettiä yksittäisiä osioita joista rakentaa sovellus. Mutta koska tämä oli ensimmäinen kerta luodessa jokseenkin kokonaista ohjelmaa WPF:llä, sekä C# oli ennakoitavissa, että tällaisia ongelmia syntyy. Mutta virheistä oppii. 
 
 
 
