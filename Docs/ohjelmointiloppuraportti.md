@@ -52,7 +52,7 @@ oli todella tehokasta kun ei todellakaan tullut juuri minkäänlaisia ongelmia
 ![](media/17d8d87a8a6460ba52e80fb69d78e584.png)
 
 Kun suunnitelma oli valmis, sekä olimme kirjoittaneet Githubiin työnjakoon ja
-itse suunnitelmaan liittyvät dokumenit, meillä oli todella helppo lähteä luomaan
+itse suunnitelmaan liittyvät dokumentit, meillä oli todella helppo lähteä luomaan
 tietokantaratkaisua yhdessä Workbenchillä, jossa saimme nähdä mitä saatamme
 tarvita, sekä koko tietokannan rakenne tuli selkeämmäksi.
 
