@@ -274,7 +274,8 @@ namespace GamePlanet
                     comm.Parameters.AddWithValue("@commentid", null);
                     comm.ExecuteNonQuery();
                     conn.Close();
-
+                    MessageBox.Show("Comment successfully added!");
+                    
                     // Check if create user succeeded
 
                 }

@@ -101,6 +101,8 @@ namespace GamePlanet
             string comment = txbComment.Text;
 
             DBLogin.AddComment(comment, account.UserID);
+            GetProfile(Globals.Username);
+            
         }
     }
 }
