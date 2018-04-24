@@ -77,7 +77,7 @@ lähelläkään ole harjoitustehtävissä tai osaamistesteissä tullut vastaan.
 Käyttöliittymä:
 ---------------
 
-# Sovellus: 
+## Sovellus: 
 
 1. Asennus
 
