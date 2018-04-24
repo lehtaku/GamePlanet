@@ -443,6 +443,17 @@ Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremm
 
 ### Yleiskuva sovelluksesta, esimerkein:
 
+Hyödynsimme Googlen material.io palvelua rakentaaksemme oikean värimaailman sovellukselle:
+
+![](media/Material.PNG)
+
+Fonttina käytimme:
+
+```XAML
+FontFamily="Microsoft YaHei UI Light"
+
+```
+
 Koska halusimme luoda uniikin käyttöliittymän, jouduimme luomaan käytettäviä asioita, kuten scrollbar alusta alkaen:
 
 ```XAML
