@@ -276,7 +276,6 @@ namespace GamePlanet
                     conn.Close();
                     MessageBox.Show("Comment successfully added!");
                     
-                    // Check if create user succeeded
 
                 }
 
