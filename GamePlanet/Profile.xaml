@@ -75,6 +75,25 @@
                 <Button x:Name ="btnLogin1" Content="#"  Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
 
             </DockPanel>
+
+            <DockPanel HorizontalAlignment="Left" Height="413" LastChildFill="False" Margin="787,145,0,0" VerticalAlignment="Top" Width="335" RenderTransformOrigin="0.5,0.5">
+                <DockPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.427"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="1.493"/>
+                    </TransformGroup>
+                </DockPanel.RenderTransform>
+                <DataGrid Name="myComments" MaxHeight="200" AutoGenerateColumns="False" Margin="5 0 5 5" Padding="10" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Comment" Binding="{Binding CommentTXT}" Width="*" FontSize="15"/>
+                        <DataGridTextColumn Header="CommentAt" Binding="{Binding CreatedAt}" Width="*" FontSize="15"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+
+
         </Grid>
 
 

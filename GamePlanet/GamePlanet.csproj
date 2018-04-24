@@ -79,6 +79,7 @@
     <Compile Include="Cart.xaml.cs">
       <DependentUpon>Cart.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Comment.cs" />
     <Compile Include="Createuser.xaml.cs">
       <DependentUpon>Createuser.xaml</DependentUpon>
     </Compile>

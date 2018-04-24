@@ -23,7 +23,7 @@ namespace GamePlanet
         // Constructors
         public Profile()
         {
-            //
+            
         }
 
         public Profile(string username)
@@ -69,6 +69,8 @@ namespace GamePlanet
             // Profile's owned products
             myProducts.ItemsSource = DBLogin.GetProfileProducts(account.UserID);
 
+            myComments.ItemsSource = DBLogin.GetProfileComments(account.UserID);
+
         }
 
         private void PathToImgSource(string imgPath)
@@ -91,6 +93,7 @@ namespace GamePlanet
         {
 
         }
+
 
     }
 }

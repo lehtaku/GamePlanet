@@ -203,6 +203,46 @@ namespace GamePlanet
             }
         }
 
+        public static List<Comment> GetProfileComments(int userId)
+        {
+            try
+            {
+                List<Comment> comments = new List<Comment>();
+
+                string connStr = GetConnectionString();
+
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+
+                    MySqlCommand comm1 = conn.CreateCommand();
+                    comm1.CommandText = "SELECT CommentTXT, CreatedAT FROM Comment WHERE ProfileID=(SELECT pr.ProfileID FROM Profile as pr WHERE UserID='" + userId + "')";
+
+                    using (MySqlDataReader reader = comm1.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Comment cmt = new Comment();
+                            cmt.CommentTXT = reader.GetString(0);
+                            cmt.CreatedAt = reader.GetString(1);
+   
+                            comments.Add(cmt);
+                        }
+                    }
+
+                    conn.Close();
+
+                    return comments;
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
         private static string GetConnectionString()
         {
 
