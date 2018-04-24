@@ -22,6 +22,33 @@ namespace GamePlanet
         public Cart()
         {
             InitializeComponent();
+            FillData();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        private void FillData()
+        {
+            dgCart.ItemsSource = Globals.ShoppingCart;
+        }
+
+        private void btnProfile_Click(object sender, RoutedEventArgs e)
+        {
+            string username = Globals.Username;
+            Profile profile = new Profile(username);
+            profile.Show();
+            this.Close();
+        }
+
+        private void btnStore_Click(object sender, RoutedEventArgs e)
+        {
+            Shop shop = new Shop();
+            shop.Show();
+            this.Close();
         }
     }
 }

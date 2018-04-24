@@ -43,6 +43,7 @@ namespace GamePlanet
             try
             {
                 dgProducts.ItemsSource = DBProduct.GetProducts();
+                txbCart.Text = Globals.CartPrice.ToString() + " €";
             }
             catch (Exception ex)
             {
@@ -114,11 +115,18 @@ namespace GamePlanet
 
             string prdName = row.Name;
 
+            // Add items to cart
+            Globals.ShoppingCart.Add(new Product(row.Name, row.Image, row.Price, row.Description));
+            Globals.CartPrice += row.Price;
+            txbCart.Text = Globals.CartPrice.ToString() + " €";
+
+        }
+
+        private void btnBuy_Click(object sender, RoutedEventArgs e)
+        {
             Cart cart = new Cart();
-            // cart.AddProducts(prdImg, prdName, prdPrice, prdDescription);
-
-
-
+            cart.Show();
+            this.Close();
         }
     }
 
