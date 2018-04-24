@@ -16,19 +16,26 @@
                 <TextBlock Height="50" TextWrapping="Wrap" Name="Usrname" Text="{Binding}" VerticalAlignment="Top" Foreground="White" FontSize="36"/>
             </DockPanel>
 
-            <StackPanel HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="291">
-                <Image Name="Avatar" Source="{Binding}" Width="250" Height="250" Margin="20 30 20 30"/>
-                <TextBlock TextWrapping="Wrap" Name="Fullname" Text="{Binding}" Margin="20 0 20 20" Foreground="White" FontSize="20"/>
+            <StackPanel HorizontalAlignment="Left" Margin="218,60,0,0" VerticalAlignment="Top" Width="172" Height="179">
+                <TextBlock TextWrapping="Wrap" x:Name="Fullname" Text="{Binding}" Margin="0,0,-212,20" Foreground="White" FontSize="20" HorizontalAlignment="Right" Width="174" Height="35"/>
             </StackPanel>
 
-            <DockPanel Margin="10,427,653,70">
+            <DockPanel Margin="416,94,380,473">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="20,10">
                     <TextBlock TextWrapping="Wrap" Name="Description" Text="{Binding}" Foreground="White" FontSize="12"/>
                 </ScrollViewer>
             </DockPanel>
 
-            <DockPanel HorizontalAlignment="Left" Height="590" LastChildFill="False" Margin="334,65,0,0" VerticalAlignment="Top" Width="609">
-                <DataGrid Name="myProducts" VerticalAlignment="Top" Margin="50,30,50,30" AutoGenerateColumns="False">
+            <DockPanel HorizontalAlignment="Left" Height="314" LastChildFill="False" Margin="199,244,0,0" VerticalAlignment="Top" Width="587" RenderTransformOrigin="0.5,0.5">
+                <DockPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.427"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="1.493"/>
+                    </TransformGroup>
+                </DockPanel.RenderTransform>
+                <DataGrid Name="myProducts" MaxHeight="200" AutoGenerateColumns="False" Margin="5 0 5 5" Padding="10" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}">
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
                             <DataGridTemplateColumn.CellTemplate>
