@@ -61,9 +61,13 @@ namespace GamePlanet
             string title = (dgProducts.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
             prodTitle.Text = title;
 
+            // Show description
+
             Product row = (Product)dgProducts.SelectedItems[0];
             string description = row.Description;
             txbDescription.Text = description;
+
+            // Update purchase button
 
             Product price = (Product)dgProducts.SelectedItems[0];
             double prdPrice = price.Price;
@@ -86,6 +90,11 @@ namespace GamePlanet
         }
 
         private void btnStore_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnPurchase_Click(object sender, RoutedEventArgs e)
         {
 
         }

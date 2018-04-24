@@ -57,7 +57,7 @@
                         <TextBlock TextWrapping="Wrap" Text="Description" Margin="0,0,335,0" HorizontalAlignment="Right" Width="481"/>
                         <TextBlock x:Name="txbDescription" TextWrapping="Wrap" Text="Description" FontSize="14" MaxHeight="200" MaxWidth="694" Foreground="White" Height="95" Margin="0,0,25,0"/>
                         <!--<TextBlock TextWrapping="Wrap" Text="Price" Name="txbPrice" Margin="0,50,50,50" FontSize="24" Foreground="#FF2B9171"/>-->
-                        <Button x:Name="btnPurchase" Margin="15" Padding="10" HorizontalAlignment="Left" Content="Purchase" Width="200" Height="50" FontFamily="Microsoft YaHei" FontSize="14" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White">
+                        <Button x:Name="btnPurchase" Margin="15" Padding="10" HorizontalAlignment="Left" Content="Purchase" Width="200" Height="50" FontFamily="Microsoft YaHei" FontSize="14" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnPurchase_Click">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
