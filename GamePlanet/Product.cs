@@ -18,10 +18,11 @@ namespace GamePlanet
             
         }
 
-        public Product(string name, string image, string description)
+        public Product(string name, string image, double price, string description)
         {
             this.Name = name;
             this.Image = image;
+            this.Price = price;
             this.Description = description;
         }
     }

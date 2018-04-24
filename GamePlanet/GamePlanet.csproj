@@ -76,6 +76,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Cart.cs" />
     <Compile Include="Createuser.xaml.cs">
       <DependentUpon>Createuser.xaml</DependentUpon>
     </Compile>

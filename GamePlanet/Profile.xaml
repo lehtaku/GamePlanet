@@ -9,7 +9,7 @@
     <Grid>
         <Grid x:Name="grdProfile" Margin="106,0,0,0">
             <Grid.Background>
-                <ImageBrush ImageSource="Media/storebg.png"/>
+                <ImageBrush ImageSource="Media/storebg.png" Opacity="0.2"/>
             </Grid.Background>
 
             <DockPanel HorizontalAlignment="Left" Height="50" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="933">
@@ -43,9 +43,9 @@
                 </DataGrid>
             </DockPanel>
 
-            <DockPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Opacity="0.9" Height="50" Width="1166">
+            <DockPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Opacity="0.9" Height="60">
 
-                <Button x:Name ="btnProfile" Content="Profile" Padding="40,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Foreground="White" Click="btnProfile_Click" RenderTransformOrigin="0.5,0.5">
+                <Button x:Name ="btnProfile" Content="Profile" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Foreground="White" Click="btnProfile_Click" RenderTransformOrigin="0.5,0.5">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -61,12 +61,13 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button x:Name ="btnStore" Content="Store" Padding="40,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White" Click="btnStore_Click"></Button>
-                <Button x:Name ="btnLogin3" Content="#" Padding="40,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
-                <Button x:Name ="btnLogin1" Content="#"  Padding="40,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
+                <Button x:Name ="btnStore" Content="Store" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White" Click="btnStore_Click"></Button>
+                <Button x:Name ="btnLogin3" Content="#" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
+                <Button x:Name ="btnLogin1" Content="#"  Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
 
             </DockPanel>
         </Grid>
+
 
     </Grid>
 </Window>
