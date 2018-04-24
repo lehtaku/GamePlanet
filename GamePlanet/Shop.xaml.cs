@@ -71,7 +71,7 @@ namespace GamePlanet
 
             Product price = (Product)dgProducts.SelectedItems[0];
             double prdPrice = price.Price;
-            string priceDisplay = ("Purchase " + prdPrice + "€").ToString();
+            string priceDisplay = ("Add to cart " + prdPrice + "€").ToString();
             btnPurchase.Content = priceDisplay;
 
         }
