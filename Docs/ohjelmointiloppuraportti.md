@@ -441,7 +441,45 @@ Todella hienoa huomata, miten paljon on kehittynyt ohjelmoinninperusteet-opintoj
 
 Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremmin, eikä niin miettiä yksittäisiä osioita joista rakentaa sovellus. Mutta koska tämä oli ensimmäinen kerta luodessa jokseenkin kokonaista ohjelmaa WPF:llä, sekä C# oli ennakoitavissa, että tällaisia ongelmia syntyy. Mutta virheistä oppii. 
 
-Ohjelma sisältää todella paljon SQL kyselyitä, ja on jatkuvasti vuorovaikutuksessa tietokannan kanssa
+Ohjelma sisältää todella paljon SQL kyselyitä, ja on jatkuvasti vuorovaikutuksessa tietokannan kanssa.
+
+```C
+ public static List<Product> GetProfileProducts(int userId)
+        {
+            try
+            {
+                List<Product> products = new List<Product>();
+
+                string connStr = GetConnectionString();
+
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+
+                    MySqlCommand comm1 = conn.CreateCommand();
+                    comm1.CommandText = "SELECT Product.Image, Product.Name, Product.Description FROM Product WHERE ProductID IN (SELECT License.ProductID FROM License WHERE UserID = '" + userId + "')";
+
+                    using (MySqlDataReader reader = comm1.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Product prod = new Product();
+                            prod.Image = reader.GetString(0);
+                            prod.Name = reader.GetString(1);
+                            prod.Description = reader.GetString(2);
+                            products.Add(prod);
+                        }
+                    }
+
+                    conn.Close();
+
+                    return products;
+                }
+
+            }
+```
+
+Poikkeuksien hallinnassa käytimme pääosin switch-case rakennetta tunnistaaksemme yleisimmät poikkeukset:
 
 ```C
  catch (MySqlException ex)
