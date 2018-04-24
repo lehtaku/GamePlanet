@@ -78,6 +78,11 @@ namespace GamePlanet
             profile.Show();
             this.Close();
         }
+
+        private void btnStore_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }

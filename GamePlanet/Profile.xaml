@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GamePlanet"
         mc:Ignorable="d"
-        Title="Profile" Height="720" Width="1107" MaxWidth="1067" MinWidth="1041" MaxHeight="720" MinHeight="200" WindowStyle="None" MouseDown="Window_MouseDown" Background="#FF080C17">
+        Title="Profile" Height="720" Width="1280" MaxWidth="1280" MinWidth="1041" MaxHeight="720" MinHeight="200" WindowStyle="None" MouseDown="Window_MouseDown" Background="#FF080C17">
     <Grid>
         <Grid x:Name="grdProfile" Margin="106,0,0,0">
             <Grid.Background>
@@ -43,14 +43,29 @@
                 </DataGrid>
             </DockPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="50 650 50 0" HorizontalAlignment="Center" Opacity="0.7">
+            <DockPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Opacity="0.9" Height="50" Width="1166">
 
-                <Button x:Name ="btnStore" Content="Store" Margin="10,20,10,0" Padding="20,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White" Click="btnStore_Click"></Button>
-                <Button x:Name ="btnLogin4" Content="#" Margin="10,20,10,0" Padding="20,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
-                <Button x:Name ="btnLogin3" Content="#" Margin="10,20,10,0" Padding="20,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
-                <Button x:Name ="btnLogin1" Content="#" Margin="10,20,10,0" Padding="20,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
+                <Button x:Name ="btnProfile" Content="Profile" Padding="40,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Foreground="White" Click="btnProfile_Click" RenderTransformOrigin="0.5,0.5">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FF00FF74" Offset="0"/>
+                            <GradientStop Color="#FF0080FF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name ="btnStore" Content="Store" Padding="40,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White" Click="btnStore_Click"></Button>
+                <Button x:Name ="btnLogin3" Content="#" Padding="40,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
+                <Button x:Name ="btnLogin1" Content="#"  Padding="40,10" FontFamily="Microsoft YaHei UI Light" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
 
-            </StackPanel>
+            </DockPanel>
         </Grid>
 
     </Grid>

@@ -49,7 +49,7 @@ namespace GamePlanet
         {
             // Welcome message
             User account = DBLogin.MySQLGetProfile(username);
-            Usrname.Text = "Tervetuloa takaisin " + account.Username + "!";
+            Usrname.Text = "Welcome Back " + account.Username + "!";
 
             // Avatar image
             if (String.IsNullOrEmpty(account.AvatarPath))
@@ -86,5 +86,11 @@ namespace GamePlanet
             shop.Show();
             this.Close();
         }
+
+        private void btnProfile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
