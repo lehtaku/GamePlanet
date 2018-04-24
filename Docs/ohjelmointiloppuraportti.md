@@ -74,9 +74,6 @@ tarkalleen miten sen pitäisi toimia ja lopputulos: Se toimi kuten ajattelimme!
 Tässä testasimme omia kykyjämme, sekä parityö taitoja. Loimme ratkaisun, jota ei
 lähelläkään ole harjoitustehtävissä tai osaamistesteissä tullut vastaan.
 
-Käyttöliittymä:
----------------
-
 # Sovellus: 
 
 ## 1. Asennus
