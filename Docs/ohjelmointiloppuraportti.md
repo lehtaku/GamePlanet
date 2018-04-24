@@ -77,9 +77,9 @@ lähelläkään ole harjoitustehtävissä tai osaamistesteissä tullut vastaan.
 Käyttöliittymä:
 ---------------
 
-## Sovellus: 
+# Sovellus: 
 
-1. Asennus
+## 1. Asennus
 
 
 mitä asioita tehtävä ja huomioitava asennuksessa
@@ -88,7 +88,20 @@ konfiguroitavat asiat
 
 
 
-2. Tietoa ohjelmasta (mitä tekee, miksi etc)
+## 2. Tietoa ohjelmasta (mitä tekee, miksi etc)
+
+### Toiminalliset vaatimukset
+
+* Test
+*
+*
+*
+
+### Ei-toiminnalliset vaatimukset
+
+* Test
+*
+*
 
 
 listaa toteutetut toiminnalliset vaatimukset
@@ -98,10 +111,10 @@ listaa ei-toiminnalliset vaatimukset sekä mahdolliset reunaehdot/rajoitukset
 
 
 
-3. Kuvaruutukaappaukset tärkeimmistä käyttöliittymistä + lyhyet käyttöohjeet jollei "ilmiselvää"
+## 3. Kuvaruutukaappaukset tärkeimmistä käyttöliittymistä + lyhyet käyttöohjeet jollei "ilmiselvää"
 
 
-4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
+## 4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
 
 ![](media/17d8d87a8a6460ba52e80fb69d78e584.png)
 
@@ -415,14 +428,16 @@ Huomioitavaa käytössä
 
 
 
-5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat
+## 5. Tiedossa olevat ongelmat ja bugit sekä jatkokehitysideat
 
 
-6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
+## 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
 
 
-7. Tekijät, vastuiden ja työmäärän jakautuminen
 
 
-8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille
+## 7. Tekijät, vastuiden ja työmäärän jakautuminen
+
+
+## 8. Tekijöiden ehdotus arvosanaksi, ja perustelut sille
 
