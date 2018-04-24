@@ -13,7 +13,7 @@
             </Grid.Background>
 
             <DockPanel HorizontalAlignment="Left" Height="50" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="933">
-                <TextBlock Height="50" TextWrapping="Wrap" Name="Usrname" Text="{Binding}" VerticalAlignment="Top" Foreground="White" FontSize="36"/>
+                <TextBlock Height="50" TextWrapping="Wrap" Name="Usrname" Text="{Binding}" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
             </DockPanel>
 
             <StackPanel HorizontalAlignment="Left" Margin="218,60,0,0" VerticalAlignment="Top" Width="172" Height="179">
@@ -76,7 +76,8 @@
 
             </DockPanel>
 
-            <DockPanel HorizontalAlignment="Left" Height="413" LastChildFill="False" Margin="787,145,0,0" VerticalAlignment="Top" Width="335" RenderTransformOrigin="0.5,0.5">
+            <TextBlock Text="Comments" Margin="791,146,42,539" Width="333" FontSize="16" Foreground="White"></TextBlock>
+            <DockPanel HorizontalAlignment="Left" Height="365" LastChildFill="False" Margin="787,193,0,0" VerticalAlignment="Top" Width="335" RenderTransformOrigin="0.5,0.5">
                 <DockPanel.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -85,12 +86,14 @@
                         <TranslateTransform X="1.493"/>
                     </TransformGroup>
                 </DockPanel.RenderTransform>
-                <DataGrid Name="myComments" MaxHeight="200" AutoGenerateColumns="False" Margin="5 0 5 5" Padding="10" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Comment" Binding="{Binding CommentTXT}" Width="*" FontSize="15"/>
-                        <DataGridTextColumn Header="CommentAt" Binding="{Binding CreatedAt}" Width="*" FontSize="15"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <ScrollViewer>
+                    <DataGrid Name="myComments" AutoGenerateColumns="False" Margin="5 0 5 5" Padding="0" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Comment" Binding="{Binding CommentTXT}" Width="200" FontSize="12"/>
+                            <DataGridTextColumn Header="CommentAt" Binding="{Binding CreatedAt}" Width="*" FontSize="8"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </ScrollViewer>
             </DockPanel>
 
 
