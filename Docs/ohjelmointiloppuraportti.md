@@ -441,7 +441,7 @@ Todella hienoa huomata, miten paljon on kehittynyt ohjelmoinninperusteet-opintoj
 
 Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremmin, eikä niin miettiä yksittäisiä osioita joista rakentaa sovellus. Mutta koska tämä oli ensimmäinen kerta luodessa jokseenkin kokonaista ohjelmaa WPF:llä, sekä C# oli ennakoitavissa, että tällaisia ongelmia syntyy. Mutta virheistä oppii. 
 
-### Yleiskuva sovelluksesta:
+### Yleiskuva sovelluksesta, esimerkein:
 
 Koska halusimme luoda uniikin käyttöliittymän, jouduimme luomaan käytettäviä asioita, kuten scrollbar alusta alkaen:
 
