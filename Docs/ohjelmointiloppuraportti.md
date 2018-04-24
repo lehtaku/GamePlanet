@@ -497,7 +497,7 @@ Sekä tietokannasta tulleen tiedon hyödyntämistä:
 
 Olennaisena osana oli siis databinding ja datagridien hyödyntäminen:
 
-```C
+```XAML
 
 <DataGrid Name="myProducts" MaxHeight="250" AutoGenerateColumns="False" Margin="5 0 5 5" Padding="10" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}">
                     <DataGrid.Columns>
