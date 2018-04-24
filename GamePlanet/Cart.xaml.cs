@@ -34,6 +34,7 @@ namespace GamePlanet
         private void FillData()
         {
             dgCart.ItemsSource = Globals.ShoppingCart;
+            txbCart.Text = "Cart: " + Globals.CartPrice.ToString() + " €";
         }
 
         private void btnProfile_Click(object sender, RoutedEventArgs e)

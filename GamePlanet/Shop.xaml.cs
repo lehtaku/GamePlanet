@@ -43,7 +43,7 @@ namespace GamePlanet
             try
             {
                 dgProducts.ItemsSource = DBProduct.GetProducts();
-                txbCart.Text = Globals.CartPrice.ToString() + " €";
+                txbCart.Text = "Cart: " + Globals.CartPrice.ToString() + " €";
             }
             catch (Exception ex)
             {
@@ -118,7 +118,7 @@ namespace GamePlanet
             // Add items to cart
             Globals.ShoppingCart.Add(new Product(row.Name, row.Image, row.Price, row.Description));
             Globals.CartPrice += row.Price;
-            txbCart.Text = Globals.CartPrice.ToString() + " €";
+            txbCart.Text = "Cart: " + Globals.CartPrice.ToString() + " €";
 
         }
 
