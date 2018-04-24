@@ -29,6 +29,7 @@ namespace GamePlanet
             InitializeComponent();
             
             FillData();
+            
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -69,8 +70,7 @@ namespace GamePlanet
 
             // Update purchase button
 
-            Product price = (Product)dgProducts.SelectedItems[0];
-            double prdPrice = price.Price;
+            double prdPrice = row.Price;
             string priceDisplay = ("Add to cart " + prdPrice + "€").ToString();
             btnPurchase.Content = priceDisplay;
 
@@ -96,8 +96,31 @@ namespace GamePlanet
 
         private void btnPurchase_Click(object sender, RoutedEventArgs e)
         {
+            object item = dgProducts.SelectedItem;
+
+            // Description 
+
+            Product row = (Product)dgProducts.SelectedItems[0];
+            string prdDescription = row.Description;
+
+            // Price
+
+            double prdPrice = row.Price;
+
+            // Image
+
+            string prdImg = row.Image;
+
+            // Name
+
+            string prdName = row.Name;
+
+            Cart cart = new Cart();
+            cart.AddProducts(prdImg, prdName, prdPrice, prdDescription);
 
         }
     }
 
 }
+
+
