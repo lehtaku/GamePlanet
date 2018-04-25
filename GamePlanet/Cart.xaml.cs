@@ -56,6 +56,8 @@ namespace GamePlanet
         private void btnBuy_Click(object sender, RoutedEventArgs e)
         {
             DBProduct.SaveOrder();
+            Globals.ShoppingCart.Clear();
+            Globals.CartPrice = 0;
             Profile profile = new Profile(Globals.Username);
             profile.Show();
             this.Close();
