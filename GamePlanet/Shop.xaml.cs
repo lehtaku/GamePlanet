@@ -135,6 +135,11 @@ namespace GamePlanet
             cart.Show();
             this.Close();
         }
+
+        private void btnLogin3_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }
