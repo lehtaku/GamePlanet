@@ -74,6 +74,7 @@ lähelläkään ole harjoitustehtävissä tai osaamistesteissä tullut vastaan.
 * putty
 * MySQL Workbench
 * notepad++
+* Krita
 
 
 # Sovellus: 
