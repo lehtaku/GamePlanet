@@ -35,6 +35,7 @@ namespace GamePlanet
         {
             dgCart.ItemsSource = Globals.ShoppingCart;
             txbCart.Text = "Cart: " + Globals.CartPrice.ToString() + " €";
+            totalPrice.Text = "Total Price: " + Globals.CartPrice.ToString() + " €";
         }
 
         private void btnProfile_Click(object sender, RoutedEventArgs e)
@@ -49,6 +50,14 @@ namespace GamePlanet
         {
             Shop shop = new Shop();
             shop.Show();
+            this.Close();
+        }
+
+        private void btnBuy_Click(object sender, RoutedEventArgs e)
+        {
+            DBProduct.SaveOrder();
+            Profile profile = new Profile(Globals.Username);
+            profile.Show();
             this.Close();
         }
     }

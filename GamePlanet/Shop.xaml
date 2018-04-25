@@ -31,6 +31,7 @@
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" FontSize="15"/>
                         <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="55" FontSize="25" Visibility="Hidden"/>
                         <DataGridTextColumn Header="Price (€)" Binding="{Binding Price}" Width="100" FontSize="25"/>
+                        <DataGridTextColumn Header="ProductID" Binding="{Binding ProductID}" Visibility="Hidden" />
                     </DataGrid.Columns>
                     <DataGrid.Resources>
                         <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="WhiteSmoke"/>
@@ -96,7 +97,7 @@
                     <Button x:Name ="btnLogin3" Content="#" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
                     <Button x:Name ="btnLogin1" Content="#"  Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
                     <TextBlock x:Name="txbCart" Text="Cart:" Padding="70,20" VerticalAlignment="Center" FontFamily="Microsoft YaHei UI Light" FontSize="12" Cursor="Hand" Background="#FF080C17" Foreground="White" TextAlignment="Center"></TextBlock>
-                    <Button x:Name ="btnBuy" Content="Purchase"  Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnBuy_Click"></Button>
+                    <Button x:Name ="btnBuy" Content="Shopping Cart"  Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" Click="btnBuy_Click"></Button>
 
                 </DockPanel>
 

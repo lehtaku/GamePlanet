@@ -61,6 +61,7 @@ namespace GamePlanet
             object item = dgProducts.SelectedItem;
             string title = (dgProducts.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
             prodTitle.Text = title;
+            
 
             // Show description
 
@@ -68,6 +69,9 @@ namespace GamePlanet
             string description = row.Description;
             txbDescription.Text = description;
 
+            // Bind ProductID
+            int prodID = row.ProductID;
+            
             // Update purchase button
 
             double prdPrice = row.Price;
@@ -115,8 +119,11 @@ namespace GamePlanet
 
             string prdName = row.Name;
 
+            // ProductID
+            int prdID = row.ProductID;
+
             // Add items to cart
-            Globals.ShoppingCart.Add(new Product(row.Name, row.Image, row.Price, row.Description));
+            Globals.ShoppingCart.Add(new Product(row.ProductID, row.Name, row.Image, row.Price, row.Description));
             Globals.CartPrice += row.Price;
             txbCart.Text = "Cart: " + Globals.CartPrice.ToString() + " €";
 

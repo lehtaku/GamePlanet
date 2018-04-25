@@ -30,14 +30,10 @@ namespace GamePlanet
         {
             InitializeComponent();
             GetProfile(username);
-            GlobalizeUser(username);
         }
 
         // Methods
-        private void GlobalizeUser(string username)
-        {
-            Globals.Username = username;
-        }
+
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -49,6 +45,12 @@ namespace GamePlanet
         {
             // Welcome message
             User account = DBLogin.MySQLGetProfile(username);
+
+            // Globalize user
+            Globals.Username = account.Username;
+            Globals.UserID = account.UserID;
+
+            // Welcome txt
             Usrname.Text = "Welcome Back " + account.Username + "!";
 
             // Avatar image
