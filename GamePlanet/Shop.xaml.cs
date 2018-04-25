@@ -140,6 +140,15 @@ namespace GamePlanet
         {
             this.Close();
         }
+
+        private void btnEmpty_Click(object sender, RoutedEventArgs e)
+        {
+            Globals.ShoppingCart.Clear();
+            Globals.CartPrice = 0;
+            Shop shop = new Shop();
+            shop.Show();
+            this.Close();
+        }
     }
 
 }
