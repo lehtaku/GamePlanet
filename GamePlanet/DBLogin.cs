@@ -84,11 +84,12 @@ namespace GamePlanet
 
                     conn.Open();
                     MySqlCommand comm = conn.CreateCommand();
-                    comm.CommandText = "INSERT INTO User(FirstName, LastName, Username, Email, Password, CreatedAt) VALUES(@fname, @lname, @uname, @email, @pword, @cat)";
+                    comm.CommandText = "INSERT INTO User(FirstName, LastName, Username, Email, Description, Password, CreatedAt) VALUES(@fname, @lname, @uname, @email, @desc, @pword, @cat)";
                     comm.Parameters.AddWithValue("@fname", firstname);
                     comm.Parameters.AddWithValue("@lname", lastname);
                     comm.Parameters.AddWithValue("@uname", username);
                     comm.Parameters.AddWithValue("@email", email);
+                    comm.Parameters.AddWithValue("@desc", "Test description");
                     comm.Parameters.AddWithValue("@pword", password);
                     comm.Parameters.AddWithValue("@cat", "NOW()");
                     comm.ExecuteNonQuery();
