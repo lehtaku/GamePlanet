@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+
 namespace GamePlanet
 {
     public class DBLogin
@@ -111,13 +112,13 @@ namespace GamePlanet
                         MessageBox.Show("Invalid username/password, please try again");
                         break;
                 }
-                
+
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                
+
             }
 
 
@@ -151,11 +152,11 @@ namespace GamePlanet
                             account.Description = reader.GetString(6);
                         }
                     }
-                        conn.Close();
+                    conn.Close();
 
                     return account;
                 }
-            } 
+            }
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
@@ -176,7 +177,7 @@ namespace GamePlanet
                     conn.Open();
 
                     MySqlCommand comm1 = conn.CreateCommand();
-                    comm1.CommandText = "SELECT Product.Image, Product.Name, Product.Description FROM Product WHERE ProductID IN (SELECT License.ProductID FROM License WHERE UserID = '"+ userId + "')";
+                    comm1.CommandText = "SELECT Product.Image, Product.Name, Product.Description FROM Product WHERE ProductID IN (SELECT License.ProductID FROM License WHERE UserID = '" + userId + "')";
 
                     using (MySqlDataReader reader = comm1.ExecuteReader())
                     {
@@ -210,13 +211,14 @@ namespace GamePlanet
                 List<Comment> comments = new List<Comment>();
 
                 string connStr = GetConnectionString();
+               
 
                 using (MySqlConnection conn = new MySqlConnection(connStr))
                 {
                     conn.Open();
 
                     MySqlCommand comm1 = conn.CreateCommand();
-                    comm1.CommandText = "SELECT CommentTXT, CreatedAT FROM Comment WHERE ProfileID=(SELECT pr.ProfileID FROM Profile as pr WHERE UserID='" + userId + "')";
+                    comm1.CommandText = "SELECT CommentTXT, CONCAT(CreatedAT) as CreatedAtS FROM Comment WHERE ProfileID=(SELECT pr.ProfileID FROM Profile as pr WHERE UserID='" + userId + "')";
 
                     using (MySqlDataReader reader = comm1.ExecuteReader())
                     {
@@ -224,8 +226,16 @@ namespace GamePlanet
                         {
                             Comment cmt = new Comment();
                             cmt.CommentTXT = reader.GetString(0);
-                            cmt.CreatedAt = reader.GetString(1);
-   
+
+                            if (Convert.ToString(reader.GetString(1)) != null)
+                            {
+                                cmt.CreatedAt = reader.GetString(1);
+                            }
+                            else
+                            {
+                                cmt.CreatedAt = "Not available";
+                            }
+
                             comments.Add(cmt);
                         }
                     }
@@ -243,14 +253,134 @@ namespace GamePlanet
             }
         }
 
+        public static void AddComment(string comment, int userId)
+        {
+
+            try
+            {
+
+                int profileid = GetProfileID(userId);
+                string connStr = GetConnectionString();
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+
+                    MySqlCommand comm = conn.CreateCommand();
+
+                    comm.CommandText = @"INSERT INTO Comment(CommentTXT, ProfileID, CreatedAt, fk_CommentID) VALUES(@comment, @profileid, @created, @commentid)";
+                    comm.Parameters.AddWithValue("@comment", comment);
+                    comm.Parameters.AddWithValue("@profileid", profileid);
+                    comm.Parameters.AddWithValue("@created", "GETDATE()");
+                    comm.Parameters.AddWithValue("@commentid", null);
+                    comm.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Comment successfully added!");
+                    
+
+                }
+
+
+            }
+            catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        break;
+
+                    case 1045:
+                        MessageBox.Show("Invalid username/password, please try again");
+                        break;
+
+                    default:
+                        MessageBox.Show(ex.Message);
+                        break;
+
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+
+        }
+
+        public static int GetProfileID(int userID)
+        {
+            string profile = "0";
+            int profileint = 0;
+
+            try
+            {
+
+                string connStr = GetConnectionString();
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+                    MySqlCommand comm2 = conn.CreateCommand();
+                    comm2.CommandText = @"SELECT pr.ProfileID FROM Profile as pr WHERE UserID=@user";
+                    comm2.Parameters.AddWithValue("@user", userID);
+                    comm2.ExecuteNonQuery();
+                    using (MySqlDataReader reader = comm2.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            profile = reader.GetString(0);
+                            profileint = Convert.ToInt32(profile);
+                            return profileint;
+                        }
+                    }
+
+                }
+
+
+            }
+            catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        break;
+
+                    case 1045:
+                        MessageBox.Show("Invalid username/password, please try again");
+                        break;
+
+                    default:
+                        MessageBox.Show(ex.Message);
+                        break;
+
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+            return profileint;
+
+        }
+
         private static string GetConnectionString()
         {
 
             string password = GamePlanet.Properties.Settings.Default.DBPassword; // DBPassword reference;
-            return string.Format("Data source=mysql.labranet.jamk.fi;Initial Catalog=K8292_2;user=K8292;password={0}", password);
+            return string.Format("Data source=mysql.labranet.jamk.fi;Initial Catalog=K8292_2;user=K8292;password={0};allow zero datetime=false", password);
         }
-    }
 
+    }
 }
+   
+
+
 
 

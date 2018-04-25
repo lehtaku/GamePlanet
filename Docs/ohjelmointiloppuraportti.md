@@ -37,8 +37,8 @@ Yhteenveto projektista:
 Teimme käytännössä kaiken tasavertaisesti, jaoimme työtehtävä ja aloimme
 työstämään projektia Githubissa.
 
-Ongelmakohtia ei oikeastaan tullut, suunnittelimme alkuun todella huolellisesti
-tietokannan rakenteen, joka loppujenlopuksi oikeasti oli toimiva ratkaisua ja
+Ongelmakohtia ei oikeastaan tullut paitsi lisenssien ostossa, suunnittelimme alkuun todella huolellisesti
+tietokannan rakenteen, joka loppujenlopuksi oikeasti oli toimiva ratkaisu ja
 suuremmilta ongelmilta vältyttiin.
 
 Eli juuri tuo mitä me taululla piirtelimme oikeasti oli todella lähellä
@@ -52,7 +52,7 @@ oli todella tehokasta kun ei todellakaan tullut juuri minkäänlaisia ongelmia
 ![](media/17d8d87a8a6460ba52e80fb69d78e584.png)
 
 Kun suunnitelma oli valmis, sekä olimme kirjoittaneet Githubiin työnjakoon ja
-itse suunnitelmaan liittyvät dokumenit, meillä oli todella helppo lähteä luomaan
+itse suunnitelmaan liittyvät dokumentit, meillä oli todella helppo lähteä luomaan
 tietokantaratkaisua yhdessä Workbenchillä, jossa saimme nähdä mitä saatamme
 tarvita, sekä koko tietokannan rakenne tuli selkeämmäksi.
 
@@ -62,54 +62,65 @@ suunnitelmaa.
 Ja vaikka tietokannassa on suhteellisen monimutkainen rakenne, tiesimme
 tarkalleen miten sen pitäisi toimia ja lopputulos: Se toimi kuten ajattelimme!
 
-Tässä testasimme omia kykyjämme, sekä parityö taitoja. Loimme ratkaisun, jota ei
+Tässä testasimme omia kykyjämme, sekä parityötaitoja. Loimme ratkaisun, jota ei
 lähelläkään ole harjoitustehtävissä tai osaamistesteissä tullut vastaan.
+
+## Työkalut:
+
+* Visual Studio 2017 
+* Canva.com
+* paint.net
+* material.io
+* putty
+* MySQL Workbench
+* notepad++
+* Krita
+
 
 # Sovellus: 
 
 ## 1. Asennus
 
 
-mitä asioita tehtävä ja huomioitava asennuksessa
-käytetyt=tarvittavat .NET Frameworkin ulkopuoliset kirjastot tai kilkkeet
-konfiguroitavat asiat
-
+Pitää varmistaa, että on yhteydessä Labranettiin. (Joko VPN yli, tai suoraan verkossa) 
+Jotta tietokanta yhteys toimii
 
 
 ## 2. Tietoa ohjelmasta (mitä tekee, miksi etc)
 
+Ohjelma on client pelikaupalle.
+Tarkoituksena on siis käyttää kaupan ominaisuuksia käyttöliittymän avulla.
+
 ### Toiminalliset vaatimukset
 
-* Test
-*
-*
-*
+* Kirjaudu sisään
+* Selaa kauppaa
+* Selaa profiilia
+* Kommentoi profiilia
+* Luo käyttäjä
+* Osta peli
+* Lisää pelejä ostoskoriin
+* Navigoida sivujen välillä
 
 ### Ei-toiminnalliset vaatimukset
 
-* Test
-*
-*
-
-
-listaa toteutetut toiminnalliset vaatimukset
-listaa toteuttamatta jääneet toiminnalliset vaatimukset
-listaa toiminnallisuus joka toteuttiin ohi/yli alkuperäisten vaatimusten
-listaa ei-toiminnalliset vaatimukset sekä mahdolliset reunaehdot/rajoitukset
-
+* Käyttöliittymä on selkeä
+* Käyttöliittymä on Englanniksi
+* Sovellus saa yhteyden tietokantaan
 
 
 ## 3. Kuvaruutukaappaukset tärkeimmistä käyttöliittymistä + lyhyet käyttöohjeet jollei "ilmiselvää"
 
 ![](media/Login.PNG)
+![](media/Profile.PNG)
+![](media/Create.PNG)
 
 
 ## 4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
 
 ![](media/17d8d87a8a6460ba52e80fb69d78e584.png)
 
-kuvaukset tietokannoista ml. tietokanta-kaavio
-laita tarvittaessa mukaan tietokannan luontiskriptit ja testidatan lisäysskriptit
+Lisäsimme testidataa perinteisillä SQL skripteillä käyttäen eri hallintaohjelmia, mutta myös käyttäen luotua ohjelmaa.
 
 Luonti:
 
@@ -425,10 +436,210 @@ Kehittää käyttöliittymää, lisätä animaatioita, sekä featureita ja refak
 
 ## 6. Mitä opittu, mitkä olivat suurimmat haasteet, mitä kannattaisi tutkia/opiskella lisää jne
 
-WPF XAML oikeaoppinen käyttöliittymän rakentaminen oli haaste, koska täytyi opiskella paljon uutta, mutta tästä selviydyimme vaikka siisteyttä olisi voinut parantaa.
+WPF XAML oikeaoppinen käyttöliittymän rakentaminen oli haaste, koska täytyi opiskella paljon uutta, mutta tästä selviydyimme vaikka siisteyttä olisi voinut parantaa. Mutta onnistuimme luomaan käyttäjäkokemuksellisesti onnistuneen tuotteen.
+UX/UI ovat selkeät ja käyttäjän ei tarvitse lukea käyttöohjeita ymmärtääkseen miten tuote toimii.
+(Eli ei siis mitään vanhaa VISMA tuotetta, josta ei ota selvää)
 
 Databinding, sekä tietokannat selvästi olivat haaste, mutta itsenäisen opiskelun jälkeen onnistuimme tässä.
 
+Kokonaisuudessaan oli ilo tehdä projektia ja oppia käyttämään versionhallintaa.
+Vaikka ongelmakohtia oli, niistä selviäminen oli todella palkitsevaa.
+Todella hienoa huomata, miten paljon on kehittynyt ohjelmoinninperusteet-opintojaksosta.
+
+Jälkeenpäin ajatellen, olisi voinut suunnitella ohjelman kokonaisuutena paremmin, eikä niin miettiä yksittäisiä osioita joista rakentaa sovellus. Mutta koska tämä oli ensimmäinen kerta luodessa jokseenkin kokonaista ohjelmaa WPF:llä, sekä C# oli ennakoitavissa, että tällaisia ongelmia syntyy. Mutta virheistä oppii. 
+
+### Yleiskuva sovelluksesta, esimerkein:
+
+         
+
+Hyödynsimme Googlen material.io palvelua rakentaaksemme oikean värimaailman sovellukselle:
+
+![](media/Material.PNG)
+
+Fonttina käytimme:
+
+```XAML
+FontFamily="Microsoft YaHei UI Light"
+
+```
+
+Koska halusimme luoda uniikin käyttöliittymän, jouduimme luomaan käytettäviä asioita, kuten scrollbar alusta alkaen:
+
+```XAML
+ <!-- Scrollbar-->
+
+        <Color x:Key="ControlLightColor">#FF080C17</Color>
+        <Color x:Key="ControlMediumColor">#FF080C17</Color>
+        <Color x:Key="DisabledForegroundColor">#FF080C17</Color>
+
+        <Style x:Key="ScrollBarLineButtonStyle" TargetType="{x:Type RepeatButton}">
+            <Setter Property="SnapsToDevicePixels"  Value="True" />
+            <Setter Property="OverridesDefaultStyle"    Value="true" />
+            <Setter Property="Focusable"    Value="false" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RepeatButton}">
+                        <Border x:Name="Border" Margin="1" CornerRadius="2" BorderThickness="1">
+                            <Border.Background>
+                                <SolidColorBrush Color="Transparent"></SolidColorBrush>
+                            </Border.Background>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="Arrow"
+                                          Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                                <EasingColorKeyFrame KeyTime="0"
+                                   Value="{StaticResource DisabledForegroundColor}" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Path x:Name="Arrow" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}">
+                                <Path.Fill>
+                                    <SolidColorBrush Color="Black"/>
+                                </Path.Fill>
+                            </Path>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+```
+
+Ohjelma sisältää todella paljon SQL kyselyitä, ja on jatkuvasti vuorovaikutuksessa tietokannan kanssa.
+
+```C
+ public static List<Product> GetProfileProducts(int userId)
+        {
+            try
+            {
+                List<Product> products = new List<Product>();
+
+                string connStr = GetConnectionString();
+
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+
+                    MySqlCommand comm1 = conn.CreateCommand();
+                    comm1.CommandText = "SELECT Product.Image, Product.Name, Product.Description FROM Product WHERE ProductID IN (SELECT License.ProductID FROM License WHERE UserID = '" + userId + "')";
+
+                    using (MySqlDataReader reader = comm1.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Product prod = new Product();
+                            prod.Image = reader.GetString(0);
+                            prod.Name = reader.GetString(1);
+                            prod.Description = reader.GetString(2);
+                            products.Add(prod);
+                        }
+                    }
+
+                    conn.Close();
+
+                    return products;
+                }
+
+            }
+```
+
+Poikkeuksien hallinnassa käytimme pääosin switch-case rakennetta tunnistaaksemme yleisimmät poikkeukset:
+
+```C
+ catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        break;
+
+                    case 1045:
+                        MessageBox.Show("Invalid username/password, please try again");
+                        break;
+                }
+
+            }
+            ...
+```
+
+Kirjoitimme koodin mahdollisimman itseselitteiseksi. Käytännössä kuka vain, joka vain osaa lukea, pystyy tulkitsemaan koodia ja sen toimintoja. Kommentointia on ja löytyy, mutta vain ilmoittamaan esimerkiksi funktion päätarkoitus.
+
+```C
+// On click show product information
+            stpProductinfo.Visibility = System.Windows.Visibility.Visible;
+
+            // Bind product information
+
+            object item = dgProducts.SelectedItem;
+            string title = (dgProducts.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
+            prodTitle.Text = title;
+
+            // Show description
+
+            Product row = (Product)dgProducts.SelectedItems[0];
+            string description = row.Description;
+            txbDescription.Text = description;
+```   
+
+Sekä tietokannasta tulleen tiedon hyödyntämistä:
+
+```C
+ private void GetProfile(string username)
+        {
+            // Welcome message
+            User account = DBLogin.MySQLGetProfile(username);
+            Usrname.Text = "Welcome Back " + account.Username + "!";
+
+            // Avatar image
+            if (String.IsNullOrEmpty(account.AvatarPath))
+            {
+                string path = "Media/Avatar/blank-avatar.png";
+                PathToImgSource(path);
+            }
+            else
+            {               
+                PathToImgSource(account.AvatarPath);
+            }
+
+            // Profile's name etc..
+            Fullname.Text = account.Firstname + " " + account.Lastname;
+            Description.Text = account.Description;
+
+            // Profile's owned products
+            myProducts.ItemsSource = DBLogin.GetProfileProducts(account.UserID);
+
+            myComments.ItemsSource = DBLogin.GetProfileComments(account.UserID);
+
+        }
+        ...
+        
+```
+
+Olennaisena osana oli siis databinding ja datagridien hyödyntäminen:
+
+```XAML
+
+<DataGrid Name="myProducts" MaxHeight="250" AutoGenerateColumns="False" Margin="5 0 5 5" Padding="10" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image x:Name="Image" Source="{Binding Image}" Margin="5 5 5 5" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" FontSize="15"/>
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="55" FontSize="25" Visibility="Hidden"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+```
 
 
 

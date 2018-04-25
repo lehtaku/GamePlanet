@@ -96,6 +96,20 @@ namespace GamePlanet
 
         }
 
+        private void btnComment_Click(object sender, RoutedEventArgs e)
+        {
+            User account = DBLogin.MySQLGetProfile(Globals.Username);
+            // Comment
+            string comment = txbComment.Text;
 
+            DBLogin.AddComment(comment, account.UserID);
+            GetProfile(Globals.Username);
+            
+        }
+
+        private void btnLogin3_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -16,19 +16,19 @@
                 <TextBlock Height="50" TextWrapping="Wrap" Name="Usrname" Text="{Binding}" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
             </DockPanel>
 
-            <StackPanel HorizontalAlignment="Left" Margin="218,60,0,0" VerticalAlignment="Top" Width="172" Height="179">
+            <StackPanel HorizontalAlignment="Left" Margin="127,60,0,0" VerticalAlignment="Top" Width="167" Height="179">
                 <TextBlock TextWrapping="Wrap" x:Name="Fullname" Text="{Binding}" Margin="0,0,-212,20" Foreground="White" FontSize="20" HorizontalAlignment="Right" Width="174" Height="35"/>
                 <Image x:Name="Avatar" Source="{Binding}" Height="174" Margin="0,-50,0,0">
                 </Image>
             </StackPanel>
 
-            <DockPanel Margin="416,94,380,473">
+            <DockPanel Margin="316,94,500,473">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="20,10">
                     <TextBlock TextWrapping="Wrap" Name="Description" Text="{Binding}" Foreground="White" FontSize="12"/>
                 </ScrollViewer>
             </DockPanel>
 
-            <DockPanel HorizontalAlignment="Left" Height="314" LastChildFill="False" Margin="199,244,0,0" VerticalAlignment="Top" Width="587" RenderTransformOrigin="0.5,0.5">
+            <DockPanel HorizontalAlignment="Left" Height="314" LastChildFill="False" Margin="107,244,0,0" VerticalAlignment="Top" Width="679" RenderTransformOrigin="0.5,0.5">
                 <DockPanel.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -37,7 +37,7 @@
                         <TranslateTransform X="1.493"/>
                     </TransformGroup>
                 </DockPanel.RenderTransform>
-                <DataGrid Name="myProducts" MaxHeight="200" AutoGenerateColumns="False" Margin="5 0 5 5" Padding="10" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}">
+                <DataGrid Name="myProducts" MaxHeight="250" AutoGenerateColumns="False" Margin="5 0 5 5" Padding="10" Background="{x:Null}" HeadersVisibility="None" GridLinesVisibility="None" AlternatingRowBackground="#FF080C17" RowBackground="#FF080C17" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True" FontFamily="Microsoft YaHei UI Light" BorderThickness="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}">
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Header="Image" Width="100" IsReadOnly="True">
                             <DataGridTemplateColumn.CellTemplate>
@@ -71,7 +71,7 @@
                     </Button.Background>
                 </Button>
                 <Button x:Name ="btnStore" Content="Store" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White" Click="btnStore_Click"></Button>
-                <Button x:Name ="btnLogin3" Content="#" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
+                <Button x:Name ="btnLogin3" Content="Exit" Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White" Click="btnLogin3_Click"></Button>
                 <Button x:Name ="btnLogin1" Content="#"  Padding="70,10" FontFamily="Microsoft YaHei UI Light" FontSize="12" BorderThickness="0" Cursor="Hand" Background="#FF080C17" Foreground="White"></Button>
 
             </DockPanel>
@@ -95,7 +95,7 @@
                     </DataGrid>
                 </ScrollViewer>
             </DockPanel>
-            <TextBox HorizontalAlignment="Left" Height="29" Text="Comment" Margin="801,399,0,284" TextWrapping="Wrap" Width="270" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,5" CaretBrush="White">
+            <TextBox x:Name="txbComment" HorizontalAlignment="Left" Height="29" Text="Comment" Margin="801,399,0,284" TextWrapping="Wrap" Width="270" FontFamily="Microsoft YaHei UI Light" Foreground="White" Padding="15,5" CaretBrush="White">
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="4"/>
@@ -118,7 +118,7 @@
                 </TextBox.Background>
 
             </TextBox>
-            <Button x:Name="btnComment" Content="Comment" Margin="801,443,233,238" FontFamily="Microsoft YaHei" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" RenderTransformOrigin="0.5,0.5">
+            <Button x:Name="btnComment" Content="Comment" Margin="801,443,233,238" FontFamily="Microsoft YaHei" FontSize="10" BorderThickness="0" Cursor="Hand" Background="#FF2B9171" Foreground="White" RenderTransformOrigin="0.5,0.5" Click="btnComment_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="7"/>
