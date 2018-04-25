@@ -65,6 +65,17 @@ tarkalleen miten sen pitäisi toimia ja lopputulos: Se toimi kuten ajattelimme!
 Tässä testasimme omia kykyjämme, sekä parityötaitoja. Loimme ratkaisun, jota ei
 lähelläkään ole harjoitustehtävissä tai osaamistesteissä tullut vastaan.
 
+## Työkalut:
+
+* Visual Studio 2017 
+* Canva.com
+* paint.net
+* material.io
+* putty
+* MySQL Workbench
+* notepad++
+
+
 # Sovellus: 
 
 ## 1. Asennus
