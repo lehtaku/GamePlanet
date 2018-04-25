@@ -109,13 +109,6 @@ Tarkoituksena on siis käyttää kaupan ominaisuuksia käyttöliittymän avulla.
 * Sovellus saa yhteyden tietokantaan
 
 
-listaa toteutetut toiminnalliset vaatimukset
-listaa toteuttamatta jääneet toiminnalliset vaatimukset
-listaa toiminnallisuus joka toteuttiin ohi/yli alkuperäisten vaatimusten
-listaa ei-toiminnalliset vaatimukset sekä mahdolliset reunaehdot/rajoitukset
-
-
-
 ## 3. Kuvaruutukaappaukset tärkeimmistä käyttöliittymistä + lyhyet käyttöohjeet jollei "ilmiselvää"
 
 ![](media/Login.PNG)
