@@ -114,6 +114,7 @@ Tarkoituksena on siis käyttää kaupan ominaisuuksia käyttöliittymän avulla.
 ![](media/Login.PNG)
 ![](media/Profile.PNG)
 ![](media/Create.PNG)
+![](media/Shop.PNG)
 
 
 ## 4. Ohjelman tarvitsemat /mukana tulevat tiedostot/tietokannat
