@@ -62,5 +62,10 @@ namespace GamePlanet
             profile.Show();
             this.Close();
         }
+
+        private void btnLogin3_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
