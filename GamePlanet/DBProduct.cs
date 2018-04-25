@@ -10,7 +10,8 @@ namespace GamePlanet
 {
     class DBProduct
     {
-    
+        private static Random random = new Random();
+
         public static List<Product> GetProducts()
         {
             try
@@ -68,7 +69,7 @@ namespace GamePlanet
                         int prodId = Globals.ShoppingCart[i].ProductID;
 
                         MySqlCommand comm = conn.CreateCommand();
-                        comm.CommandText = "INSERT INTO License (LicenseKey, ProductID, UserID) VALUES('K244-S938', '" + prodId + "', '" + Globals.UserID + "')";
+                        comm.CommandText = "INSERT INTO License (LicenseKey, ProductID, UserID) VALUES('" + RandomString(8) + "', '" + prodId + "', '" + Globals.UserID + "')";
                         comm.ExecuteNonQuery();
                     }
 
@@ -80,7 +81,14 @@ namespace GamePlanet
                 MessageBox.Show(ex.Message);
                
             }        
+        }
 
+        // Generate license key
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
         private static string GetConnectionString()
