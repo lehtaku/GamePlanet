@@ -1,6 +1,4 @@
-# Projektinimi - GamePlanet
-
-## Harjoitustyö
+# GamePlanet
 
 ### Tekijät
  * Leevi Kopakkala - K8292 | K8292@student.jamk.fi
